@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginVC.swift
 //  Foodie Fun
 //
 //  Created by Jeffrey Santana on 8/26/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginVC: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
