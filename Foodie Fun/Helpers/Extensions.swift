@@ -6,7 +6,7 @@
 //  Copyright © 2019 Lambda. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 //MARK: - Codable
 
@@ -26,3 +26,9 @@ extension Encodable {
 	}
 }
 
+extension UITextField {
+	var optionalText: String? {
+		let trimmedText = self.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+		return (trimmedText ?? "").isEmpty ? nil : trimmedText
+	}
+}

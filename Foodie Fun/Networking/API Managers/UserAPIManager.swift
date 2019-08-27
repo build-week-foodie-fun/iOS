@@ -11,9 +11,9 @@ import Foundation
 
 extension NetworkManager {
 	
-	func register(newUser: LoginRequest, completion: @escaping (_ login: Login?, _ error: String?) -> Void) {
+	func register(newUser: LoginRequest, completion: @escaping (_ login: ReturnID?, _ error: String?) -> Void) {
 		router.request(.register(request: newUser)) { (data, response, error) in
-			let returnRequest = self.getObject(data, response, error, Login.self)
+			let returnRequest = self.getObject(data, response, error, ReturnID.self)
 			completion(returnRequest.0, returnRequest.1)
 		}
 	}
