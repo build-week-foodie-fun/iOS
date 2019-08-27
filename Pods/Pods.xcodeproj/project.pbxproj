@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		58BE5D10254F9822DDAC4E0EC48CB5A6 /* Pods-Foodie Fun-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4995695E53A3649147185AD6587CF7EE /* Pods-Foodie Fun-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A967960EE4C1C1AF8A3FC3555BABDC58 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45FDC0D6DC265F0A753008ABAAB304D /* Keychain.swift */; };
-		BDA750A5542A5D826A35B1BE6A69574A /* KeychainAccess-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA80DF733F9C567A1EF7FF20F2090B0C /* KeychainAccess-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A967960EE4C1C1AF8A3FC3555BABDC58 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C959114E4CB37CA2C2C1E2E447EEC583 /* Keychain.swift */; };
+		BDA750A5542A5D826A35B1BE6A69574A /* KeychainAccess-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1934EE75C81BD0E27D459BEDC36F4870 /* KeychainAccess-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C456AEBA7FACA838B8EF6CE4F7029C3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		D637B614F2BE258BFB5E0611BDE2978C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		D823270043210DD356225D7700FAF3E4 /* KeychainAccess-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A18FDB236794E79DE6CA29611855B6 /* KeychainAccess-dummy.m */; };
+		D823270043210DD356225D7700FAF3E4 /* KeychainAccess-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2155049ED12A86CEBC89355E13ACE62 /* KeychainAccess-dummy.m */; };
 		E3CDFDE354D4BD77278917E156000B92 /* Pods-Foodie Fun-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E6A749E7D8B344DA5A64D2DCB87794 /* Pods-Foodie Fun-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -28,26 +28,30 @@
 
 /* Begin PBXFileReference section */
 		17CE35588528DB7A0D9AA0471E82C44B /* Pods-Foodie Fun-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Foodie Fun-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1934EE75C81BD0E27D459BEDC36F4870 /* KeychainAccess-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-umbrella.h"; sourceTree = "<group>"; };
 		237767CA7D1803C11D47A4E7CD315A7C /* Pods-Foodie Fun-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Foodie Fun-acknowledgements.plist"; sourceTree = "<group>"; };
-		2B472BC60C275B5785DF95A0B8D4BCE8 /* KeychainAccess.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainAccess.xcconfig; sourceTree = "<group>"; };
 		2C002E13E5FCEB023B4FFEF17EAC0448 /* Pods-Foodie Fun.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Foodie Fun.modulemap"; sourceTree = "<group>"; };
 		3473DF17C9E662C006F5CC2DF982953F /* Pods-Foodie Fun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Foodie Fun.release.xcconfig"; sourceTree = "<group>"; };
 		400C15BD8B5F50B78BE9ED3261AC7D4E /* Pods_Foodie_Fun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Foodie_Fun.framework; path = "Pods-Foodie Fun.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48E60632A973D7941EF6BB9D20EA37AC /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		4995695E53A3649147185AD6587CF7EE /* Pods-Foodie Fun-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Foodie Fun-umbrella.h"; sourceTree = "<group>"; };
-		5E8D63213B2D159784C91DFE75A4DC63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E18987DE1952E8E1ACB04027E06E0C2 /* KeychainAccess.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainAccess.xcconfig; sourceTree = "<group>"; };
+		5E47AE3BF83EE3C5C11B3A903B1E8976 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		78A18FDB236794E79DE6CA29611855B6 /* KeychainAccess-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainAccess-dummy.m"; sourceTree = "<group>"; };
 		876B548576157A8F8455B51D2072B32F /* Pods-Foodie Fun-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Foodie Fun-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96402EB1DE717F29B8F919B31832CB67 /* Pods-Foodie Fun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Foodie Fun.debug.xcconfig"; sourceTree = "<group>"; };
 		A6CD4DFAC073E837C44806642BF9A7C2 /* Pods-Foodie Fun-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Foodie Fun-resources.sh"; sourceTree = "<group>"; };
-		AA80DF733F9C567A1EF7FF20F2090B0C /* KeychainAccess-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-umbrella.h"; sourceTree = "<group>"; };
 		B0E6A749E7D8B344DA5A64D2DCB87794 /* Pods-Foodie Fun-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Foodie Fun-dummy.m"; sourceTree = "<group>"; };
+		B9FA487BC7D79CC10B0B21733815CD77 /* KeychainAccess-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-prefix.pch"; sourceTree = "<group>"; };
+		BF68D6E60E680AB1D4E4350FDAD506F5 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		C884B5F0A04193BE96B56F6ECBB23502 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainAccess.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D003DAC0C42D4E9ED544779DEF3960D2 /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
+		C959114E4CB37CA2C2C1E2E447EEC583 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
+		D1351D99981ACBEE4C8899274213CD3E /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		DB0F3E8E5ECA997A544E73448F956F46 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E19070D68BB246AA62E9BDDCCFA91EF4 /* KeychainAccess-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-prefix.pch"; sourceTree = "<group>"; };
-		E45FDC0D6DC265F0A753008ABAAB304D /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
+		E2155049ED12A86CEBC89355E13ACE62 /* KeychainAccess-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainAccess-dummy.m"; sourceTree = "<group>"; };
+		F33628159661F446E9E60BAF9CFD820F /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
+		F8520D4BFB149003D1F151FC9628EE9D /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +74,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AB1A47AA2CBC2031F01A4135312B7D7 /* Pods */ = {
+		3C8006D58CE1B723A720A65D52B93F71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9CE82D5F87403F7C6C58580E58F91C25 /* KeychainAccess */,
+				D1351D99981ACBEE4C8899274213CD3E /* GoogleMaps.framework */,
+				BF68D6E60E680AB1D4E4350FDAD506F5 /* GoogleMapsCore.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		484FF608691A00614C55275C3E97033E /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				3C8006D58CE1B723A720A65D52B93F71 /* Frameworks */,
+				E653B4CE0477FF8ACFA9B7D13D13D945 /* Resources */,
+			);
+			name = Maps;
 			sourceTree = "<group>";
 		};
 		5298EDB0E8F9D5620B319DBC37E96F5A /* Products */ = {
@@ -87,18 +101,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6C04A18F8F3D57BD7813F35DCB32BD43 /* Support Files */ = {
+		5E155295EDB1DC18F76DCBB63DB463DE /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				5E8D63213B2D159784C91DFE75A4DC63 /* Info.plist */,
-				D003DAC0C42D4E9ED544779DEF3960D2 /* KeychainAccess.modulemap */,
-				2B472BC60C275B5785DF95A0B8D4BCE8 /* KeychainAccess.xcconfig */,
-				78A18FDB236794E79DE6CA29611855B6 /* KeychainAccess-dummy.m */,
-				E19070D68BB246AA62E9BDDCCFA91EF4 /* KeychainAccess-prefix.pch */,
-				AA80DF733F9C567A1EF7FF20F2090B0C /* KeychainAccess-umbrella.h */,
+				6638BE2B6B5C3E296F233ED09F4D9AE4 /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/KeychainAccess";
+			name = Base;
+			sourceTree = "<group>";
+		};
+		6638BE2B6B5C3E296F233ED09F4D9AE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8520D4BFB149003D1F151FC9628EE9D /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		72605110D4B1AF231A7F2174F1A17CFD /* Targets Support Files */ = {
@@ -132,20 +148,19 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				2AB1A47AA2CBC2031F01A4135312B7D7 /* Pods */,
+				BB9C1C86775A966139A3C8FEB9E9AE32 /* Pods */,
 				5298EDB0E8F9D5620B319DBC37E96F5A /* Products */,
 				72605110D4B1AF231A7F2174F1A17CFD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9CE82D5F87403F7C6C58580E58F91C25 /* KeychainAccess */ = {
+		BB9C1C86775A966139A3C8FEB9E9AE32 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E45FDC0D6DC265F0A753008ABAAB304D /* Keychain.swift */,
-				6C04A18F8F3D57BD7813F35DCB32BD43 /* Support Files */,
+				F71C89F49DB92D855D0E1FE03B0E08FF /* GoogleMaps */,
+				C1CEA9B254896A86F70C8A9ACA64974E /* KeychainAccess */,
 			);
-			name = KeychainAccess;
-			path = KeychainAccess;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -156,12 +171,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C1CEA9B254896A86F70C8A9ACA64974E /* KeychainAccess */ = {
+			isa = PBXGroup;
+			children = (
+				C959114E4CB37CA2C2C1E2E447EEC583 /* Keychain.swift */,
+				C7E810E5F359AB3FDB80B6C806B54A55 /* Support Files */,
+			);
+			name = KeychainAccess;
+			path = KeychainAccess;
+			sourceTree = "<group>";
+		};
+		C7E810E5F359AB3FDB80B6C806B54A55 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E47AE3BF83EE3C5C11B3A903B1E8976 /* Info.plist */,
+				F33628159661F446E9E60BAF9CFD820F /* KeychainAccess.modulemap */,
+				4E18987DE1952E8E1ACB04027E06E0C2 /* KeychainAccess.xcconfig */,
+				E2155049ED12A86CEBC89355E13ACE62 /* KeychainAccess-dummy.m */,
+				B9FA487BC7D79CC10B0B21733815CD77 /* KeychainAccess-prefix.pch */,
+				1934EE75C81BD0E27D459BEDC36F4870 /* KeychainAccess-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KeychainAccess";
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E653B4CE0477FF8ACFA9B7D13D13D945 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				48E60632A973D7941EF6BB9D20EA37AC /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F71C89F49DB92D855D0E1FE03B0E08FF /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				5E155295EDB1DC18F76DCBB63DB463DE /* Base */,
+				484FF608691A00614C55275C3E97033E /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,7 +467,7 @@
 		};
 		8654E64340802A58CD8AA0AABBFCCC9E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B472BC60C275B5785DF95A0B8D4BCE8 /* KeychainAccess.xcconfig */;
+			baseConfigurationReference = 4E18987DE1952E8E1ACB04027E06E0C2 /* KeychainAccess.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -506,7 +563,7 @@
 		};
 		F52A563601EE420D54FE40C46DA3BA3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B472BC60C275B5785DF95A0B8D4BCE8 /* KeychainAccess.xcconfig */;
+			baseConfigurationReference = 4E18987DE1952E8E1ACB04027E06E0C2 /* KeychainAccess.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

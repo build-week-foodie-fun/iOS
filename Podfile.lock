@@ -1,16 +1,24 @@
 PODS:
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
   - KeychainAccess (3.1.1)
 
 DEPENDENCIES:
+  - GoogleMaps
   - KeychainAccess
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - GoogleMaps
     - KeychainAccess
 
 SPEC CHECKSUMS:
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
 
-PODFILE CHECKSUM: 347c67186003fe465e45ff279bfadccdf049812f
+PODFILE CHECKSUM: ed7b433e9e04bfb920763f88068513c3187cbaf3
 
 COCOAPODS: 1.5.0

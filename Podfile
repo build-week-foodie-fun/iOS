@@ -6,5 +6,6 @@ target 'Foodie Fun' do
   use_frameworks!
 
   pod 'KeychainAccess'
+  pod 'GoogleMaps'
 
 end

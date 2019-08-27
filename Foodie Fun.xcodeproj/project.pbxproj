@@ -32,6 +32,7 @@
 		B5166B4B2314A2670009EA8E /* ReviewAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B4A2314A2670009EA8E /* ReviewAPIManager.swift */; };
 		B5166B4D2314A7390009EA8E /* ReturnID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B4C2314A7390009EA8E /* ReturnID.swift */; };
 		B527E9D92315AD9400DE51CC /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9D82315AD9400DE51CC /* RegistrationVC.swift */; };
+		B527E9DD2315E2D300DE51CC /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9DC2315E2D300DE51CC /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		B5166B4A2314A2670009EA8E /* ReviewAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewAPIManager.swift; sourceTree = "<group>"; };
 		B5166B4C2314A7390009EA8E /* ReturnID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnID.swift; sourceTree = "<group>"; };
 		B527E9D82315AD9400DE51CC /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		B527E9DC2315E2D300DE51CC /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		B5166B2B23142DA30009EA8E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B527E9DC2315E2D300DE51CC /* Keys.swift */,
 				B5166B1E23142D770009EA8E /* Assets.xcassets */,
 				B5166B2323142D770009EA8E /* Info.plist */,
 				B5166B1423142D750009EA8E /* AppDelegate.swift */,
@@ -229,6 +232,7 @@
 				B5166B0E23142D750009EA8E /* Frameworks */,
 				B5166B0F23142D750009EA8E /* Resources */,
 				1E0953E46AF0F14B5F99EB7A /* [CP] Embed Pods Frameworks */,
+				3DA8CA4B0BA1B5964EAA2B5F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,6 +311,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foodie Fun/Pods-Foodie Fun-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3DA8CA4B0BA1B5964EAA2B5F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Foodie Fun/Pods-Foodie Fun-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foodie Fun/Pods-Foodie Fun-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		83F0B9851F1B7DB463525C37 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,6 +360,7 @@
 				B5166B49231499550009EA8E /* UserAPIManager.swift in Sources */,
 				B5166B33231445380009EA8E /* Service.swift in Sources */,
 				B5166B35231447C80009EA8E /* Router.swift in Sources */,
+				B527E9DD2315E2D300DE51CC /* Keys.swift in Sources */,
 				B5166B4D2314A7390009EA8E /* ReturnID.swift in Sources */,
 				B5166B4323148C7B0009EA8E /* ReviewRequest.swift in Sources */,
 				B5166B3F23147C110009EA8E /* Extensions.swift in Sources */,
