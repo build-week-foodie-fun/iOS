@@ -7,3 +7,83 @@
 //
 
 import Foundation
+import KeychainAccess
+
+class SettingsController {
+	static let shared = SettingsController()
+	
+	private let defaults = UserDefaults.standard
+	private let keychain = Keychain(service: "com.build-week.Foodie")
+	
+	private let tokenKey = "token_key"
+	private let userIdKey = "user_id_key"
+	private let usernameKey = "username_key"
+	private let userPasswordKey = "user_password_key"
+	private let saveProfileKey = "save_profile_key"
+	
+	private(set) var userToken: String? {
+		get {
+			return keychain[tokenKey]
+		}
+		set {
+			guard let newToken = newValue else {
+				keychain[tokenKey] = nil
+				return
+			}
+			keychain[tokenKey] = newToken
+		}
+	}
+	
+	private(set) var loggedInUser: Login?
+	
+	private(set) var userCredentials: LoginRequest? {
+		get {
+			guard let username = keychain[usernameKey], let password = keychain[userPasswordKey] else { return nil }
+			return LoginRequest(username: username, password: password)
+		}
+		set {
+			guard let newValue = newValue else {
+				keychain[usernameKey] = nil
+				keychain[userPasswordKey] = nil
+				return
+			}
+			keychain[usernameKey] = newValue.username
+			keychain[userPasswordKey] = newValue.password
+		}
+	}
+	
+	var isSaveCredentials: Bool {
+		get {
+			guard let isSaved = defaults.value(forKey: saveProfileKey) as? Bool else { return false }
+			return isSaved
+		}
+		set {
+			if !newValue {
+				userCredentials = nil
+			}
+			defaults.set(newValue, forKey: saveProfileKey)
+		}
+	}
+	
+	//MARK: Life Cycle
+	
+	private init() {
+		//This allows to clear the keychain when is a fresh installation, in order to remove the saved passwords.
+		let freshInstallationKey = "FreshInstallation"
+		if defaults.value(forKey: freshInstallationKey) == nil {
+			_ = try? keychain.removeAll()
+			defaults.set(false, forKey: freshInstallationKey)
+		}
+	}
+	
+	func persist(credentials: LoginRequest) {
+		if isSaveCredentials {
+			userCredentials = credentials
+		}
+	}
+	
+	func loginProcedure(_ user: Login) {
+		loggedInUser = user
+		userToken = user.token
+	}
+}
