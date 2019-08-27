@@ -33,6 +33,7 @@
 		B5166B4D2314A7390009EA8E /* ReturnID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B4C2314A7390009EA8E /* ReturnID.swift */; };
 		B527E9D92315AD9400DE51CC /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9D82315AD9400DE51CC /* RegistrationVC.swift */; };
 		B527E9DD2315E2D300DE51CC /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9DC2315E2D300DE51CC /* Keys.swift */; };
+		B527E9DF2315E5FD00DE51CC /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9DE2315E5FD00DE51CC /* SearchVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		B5166B4C2314A7390009EA8E /* ReturnID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnID.swift; sourceTree = "<group>"; };
 		B527E9D82315AD9400DE51CC /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		B527E9DC2315E2D300DE51CC /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		B527E9DE2315E5FD00DE51CC /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				B5166B1623142D750009EA8E /* LoginVC.swift */,
+				B527E9DE2315E5FD00DE51CC /* SearchVC.swift */,
 				B527E9D82315AD9400DE51CC /* RegistrationVC.swift */,
 			);
 			path = "View Controllers";
@@ -370,6 +373,7 @@
 				B5166B1523142D750009EA8E /* AppDelegate.swift in Sources */,
 				B527E9D92315AD9400DE51CC /* RegistrationVC.swift in Sources */,
 				B5166B47231497350009EA8E /* NetworkManager.swift in Sources */,
+				B527E9DF2315E5FD00DE51CC /* SearchVC.swift in Sources */,
 				B5166B3923144C2B0009EA8E /* JSONParameterEncoder.swift in Sources */,
 				B5166B1D23142D750009EA8E /* Foodie_Fun.xcdatamodeld in Sources */,
 				B5166B4123147C560009EA8E /* Login.swift in Sources */,
