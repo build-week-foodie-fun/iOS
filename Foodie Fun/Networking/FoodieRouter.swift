@@ -18,7 +18,7 @@ enum FoodieRouter {
 
 extension FoodieRouter: EndPointType {
 	var baseURL: URL {
-		guard let url = URL(string: "https://buildweek-foodie1.herokuapp.com/") else { fatalError("baseURL could not be configured")}
+		guard let url = URL(string: "https://buildweek-foodie1.herokuapp.com/auth/") else { fatalError("baseURL could not be configured")}
 		return url
 	}
 	
@@ -30,14 +30,14 @@ extension FoodieRouter: EndPointType {
 			return "login"
 		case .putReview(let id, _):
 			if let reviewId = id {
-				return "auth/api/\(reviewId)"
+				return "api/\(reviewId)"
 			} else {
-				return "auth/api"
+				return "api"
 			}
 		case .getReviews:
-			return "auth/api"
+			return "api"
 		case .deleteReviewBy(let reviewId):
-			return "auth/api/\(reviewId)"
+			return "api/\(reviewId)"
 		}
 	}
 	

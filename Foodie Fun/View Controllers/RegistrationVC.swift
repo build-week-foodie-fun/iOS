@@ -42,7 +42,9 @@ class RegistrationVC: UIViewController {
 			guard loginId != nil else { return }
 			SettingsController.shared.persist(credentials: loginRequest)
 			
-			self.continuetoNextScreen()
+			DispatchQueue.main.async {
+				self.continuetoNextScreen()
+			}
 		}
 	}
 	

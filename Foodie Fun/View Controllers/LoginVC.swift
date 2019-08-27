@@ -20,6 +20,12 @@ class LoginVC: UIViewController {
 	
 	//MARK: - Life Cycle
 	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		SettingsController.shared.isSaveCredentials = true
+	}
+	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(true)
 		
@@ -49,10 +55,12 @@ class LoginVC: UIViewController {
 			SettingsController.shared.persist(credentials: loginRequest)
 			SettingsController.shared.loginProcedure(login)
 			
-			if SettingsController.shared.isFreshInstall {
-				self.performSegue(withIdentifier: "TutorialSegue", sender: nil)
-			} else if let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateInitialViewController() {
-				self.present(searchVC, animated: true, completion: nil)
+			DispatchQueue.main.async {
+				if SettingsController.shared.isFreshInstall {
+					self.performSegue(withIdentifier: "TutorialSegue", sender: nil)
+				} else if let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateInitialViewController() {
+					self.present(searchVC, animated: true, completion: nil)
+				}
 			}
 		}
 	}
