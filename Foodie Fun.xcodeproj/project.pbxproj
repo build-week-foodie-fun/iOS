@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		619F6FD1DA2923569A11D3C5 /* Pods_Foodie_Fun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4E5EE124BEE48EC0FBF0D1 /* Pods_Foodie_Fun.framework */; };
 		6393029723158F8900B899F3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6393029623158F8900B899F3 /* Onboarding.storyboard */; };
 		63930299231590F600B899F3 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63930298231590F600B899F3 /* Account.storyboard */; };
 		6393029B231591EB00B899F3 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6393029A231591EB00B899F3 /* Search.storyboard */; };
-		619F6FD1DA2923569A11D3C5 /* Pods_Foodie_Fun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4E5EE124BEE48EC0FBF0D1 /* Pods_Foodie_Fun.framework */; };
 		B5166B1523142D750009EA8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B1423142D750009EA8E /* AppDelegate.swift */; };
-		B5166B1723142D750009EA8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B1623142D750009EA8E /* ViewController.swift */; };
+		B5166B1723142D750009EA8E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B1623142D750009EA8E /* LoginVC.swift */; };
 		B5166B1A23142D750009EA8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5166B1823142D750009EA8E /* Main.storyboard */; };
 		B5166B1D23142D750009EA8E /* Foodie_Fun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5166B1B23142D750009EA8E /* Foodie_Fun.xcdatamodeld */; };
 		B5166B1F23142D770009EA8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5166B1E23142D770009EA8E /* Assets.xcassets */; };
@@ -31,18 +31,19 @@
 		B5166B49231499550009EA8E /* UserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B48231499550009EA8E /* UserAPIManager.swift */; };
 		B5166B4B2314A2670009EA8E /* ReviewAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B4A2314A2670009EA8E /* ReviewAPIManager.swift */; };
 		B5166B4D2314A7390009EA8E /* ReturnID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B4C2314A7390009EA8E /* ReturnID.swift */; };
+		B527E9D92315AD9400DE51CC /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9D82315AD9400DE51CC /* RegistrationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6393029623158F8900B899F3 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
-		63930298231590F600B899F3 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
-		6393029A231591EB00B899F3 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		032947ADD9A8A811F8D3B5CA /* Pods-Foodie Fun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie Fun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie Fun/Pods-Foodie Fun.debug.xcconfig"; sourceTree = "<group>"; };
 		13018803B1B5F5A18E814FD3 /* Pods-Foodie Fun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie Fun.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie Fun/Pods-Foodie Fun.release.xcconfig"; sourceTree = "<group>"; };
 		4E4E5EE124BEE48EC0FBF0D1 /* Pods_Foodie_Fun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodie_Fun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6393029623158F8900B899F3 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		63930298231590F600B899F3 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		6393029A231591EB00B899F3 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		B5166B1123142D750009EA8E /* Foodie Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foodie Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5166B1423142D750009EA8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5166B1623142D750009EA8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5166B1623142D750009EA8E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B5166B1923142D750009EA8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5166B1C23142D750009EA8E /* Foodie_Fun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Foodie_Fun.xcdatamodel; sourceTree = "<group>"; };
 		B5166B1E23142D770009EA8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		B5166B48231499550009EA8E /* UserAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIManager.swift; sourceTree = "<group>"; };
 		B5166B4A2314A2670009EA8E /* ReviewAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewAPIManager.swift; sourceTree = "<group>"; };
 		B5166B4C2314A7390009EA8E /* ReturnID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnID.swift; sourceTree = "<group>"; };
+		B527E9D82315AD9400DE51CC /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +145,8 @@
 		B5166B2C23142DA30009EA8E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B5166B1623142D750009EA8E /* ViewController.swift */,
+				B5166B1623142D750009EA8E /* LoginVC.swift */,
+				B527E9D82315AD9400DE51CC /* RegistrationVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -191,11 +194,19 @@
 				B5166B34231447C80009EA8E /* Router.swift */,
 				B5166B3823144C2B0009EA8E /* JSONParameterEncoder.swift */,
 				B5166B3A23144E580009EA8E /* FoodieRouter.swift */,
+				B527E9D72315A84500DE51CC /* API Managers */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B527E9D72315A84500DE51CC /* API Managers */ = {
+			isa = PBXGroup;
+			children = (
 				B5166B46231497350009EA8E /* NetworkManager.swift */,
 				B5166B48231499550009EA8E /* UserAPIManager.swift */,
 				B5166B4A2314A2670009EA8E /* ReviewAPIManager.swift */,
 			);
-			path = Networking;
+			path = "API Managers";
 			sourceTree = "<group>";
 		};
 		F063A8FA38AE9FC8F3DD955E /* Frameworks */ = {
@@ -323,7 +334,7 @@
 			files = (
 				B5166B3D231477FA0009EA8E /* LoginRequest.swift in Sources */,
 				B5166B372314491F0009EA8E /* SettingsController.swift in Sources */,
-				B5166B1723142D750009EA8E /* ViewController.swift in Sources */,
+				B5166B1723142D750009EA8E /* LoginVC.swift in Sources */,
 				B5166B49231499550009EA8E /* UserAPIManager.swift in Sources */,
 				B5166B33231445380009EA8E /* Service.swift in Sources */,
 				B5166B35231447C80009EA8E /* Router.swift in Sources */,
@@ -334,6 +345,7 @@
 				B5166B3B23144E580009EA8E /* FoodieRouter.swift in Sources */,
 				B5166B4523148E5D0009EA8E /* Review.swift in Sources */,
 				B5166B1523142D750009EA8E /* AppDelegate.swift in Sources */,
+				B527E9D92315AD9400DE51CC /* RegistrationVC.swift in Sources */,
 				B5166B47231497350009EA8E /* NetworkManager.swift in Sources */,
 				B5166B3923144C2B0009EA8E /* JSONParameterEncoder.swift in Sources */,
 				B5166B1D23142D750009EA8E /* Foodie_Fun.xcdatamodeld in Sources */,

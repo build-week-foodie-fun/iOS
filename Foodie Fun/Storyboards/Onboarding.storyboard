@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="NBa-qt-ila">
             <objects>
-                <viewController id="8vc-1H-9b7" customClass="ViewController" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8vc-1H-9b7" customClass="LoginVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PL3-4q-fSj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
                                                 <color key="tintColor" red="0.95120667049999996" green="0.94661146920000006" blue="0.95580187179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Sign In"/>
                                                 <connections>
-                                                    <segue destination="d1e-0n-BdX" kind="show" id="Ofg-xZ-lks"/>
+                                                    <action selector="signInBtnTapped:" destination="8vc-1H-9b7" eventType="touchUpInside" id="F77-PP-NOF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-rm-Rme">
@@ -80,15 +80,20 @@
                         <viewLayoutGuide key="safeArea" id="dfN-J2-Y62"/>
                     </view>
                     <navigationItem key="navigationItem" id="K8T-QT-Puc"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="X5D-Jg-QAs" id="PbL-3Y-0ts"/>
+                        <outlet property="usernameTextField" destination="tCk-5j-6Ln" id="aJ4-1G-ff7"/>
+                        <segue destination="9iq-HB-wkN" kind="show" identifier="TutorialSegue" id="NJz-U6-pol"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnA-ah-7yM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1865" y="445"/>
+            <point key="canvasLocation" x="-926" y="445"/>
         </scene>
         <!--Create Account-->
         <scene sceneID="vt3-bU-BCJ">
             <objects>
-                <viewController id="Bo8-OX-ofp" sceneMemberID="viewController">
+                <viewController id="Bo8-OX-ofp" customClass="RegistrationVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s6M-ca-xL3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +105,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-S0-mEY">
                                         <rect key="frame" x="0.0" y="60" width="314" height="30"/>
@@ -112,13 +117,13 @@
                                         <rect key="frame" x="0.0" y="120" width="314" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xcq-Cm-mCl">
                                         <rect key="frame" x="0.0" y="180" width="314" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFH-HF-nTb">
                                         <rect key="frame" x="0.0" y="240" width="314" height="30"/>
@@ -126,7 +131,7 @@
                                         <color key="tintColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Create Account"/>
                                         <connections>
-                                            <segue destination="9iq-HB-wkN" kind="presentation" id="cw4-Sa-lCO"/>
+                                            <action selector="CreateAccountBtnTapped:" destination="Bo8-OX-ofp" eventType="touchUpInside" id="SUc-Ks-iuv"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -140,21 +145,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o8w-FS-A7a"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Account" id="Vzx-Ga-Qcm">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="iPQ-8b-gs9"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Create Account" id="Vzx-Ga-Qcm"/>
+                    <connections>
+                        <outlet property="confirmPwTextField" destination="Xcq-Cm-mCl" id="7Jc-Ea-SLN"/>
+                        <outlet property="nameTextField" destination="G4b-Eu-dXw" id="bti-fd-ftq"/>
+                        <outlet property="passwordTextField" destination="cpA-1n-nDe" id="q6T-uG-OAW"/>
+                        <outlet property="usernameTextField" destination="bx9-S0-mEY" id="6qn-G6-Uzq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP5-BC-I0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802.89855072463774" y="444.64285714285711"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="H2M-Tb-5FM">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="d1e-0n-BdX" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OGS-9t-j8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1266" y="-32"/>
+            <point key="canvasLocation" x="-55" y="445"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PgD-md-LcZ">
@@ -289,7 +290,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="THf-Oo-0QM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRc-zK-FHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776" y="848"/>
+            <point key="canvasLocation" x="583" y="1187"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jRt-5d-g4E">
@@ -307,7 +308,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxN-wK-fBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2755" y="445"/>
+            <point key="canvasLocation" x="-1804" y="445"/>
         </scene>
     </scenes>
 </document>
