@@ -11,7 +11,6 @@
 		6393029723158F8900B899F3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6393029623158F8900B899F3 /* Onboarding.storyboard */; };
 		63930299231590F600B899F3 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63930298231590F600B899F3 /* Account.storyboard */; };
 		6393029B231591EB00B899F3 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6393029A231591EB00B899F3 /* Search.storyboard */; };
-		6393029F2316712800B899F3 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 6393029E2316712800B899F3 /* Montserrat */; };
 		B5166B1523142D750009EA8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B1423142D750009EA8E /* AppDelegate.swift */; };
 		B5166B1723142D750009EA8E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B1623142D750009EA8E /* LoginVC.swift */; };
 		B5166B1A23142D750009EA8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5166B1823142D750009EA8E /* Main.storyboard */; };
@@ -33,6 +32,14 @@
 		B5166B4B2314A2670009EA8E /* ReviewAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B4A2314A2670009EA8E /* ReviewAPIManager.swift */; };
 		B5166B4D2314A7390009EA8E /* ReturnID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B4C2314A7390009EA8E /* ReturnID.swift */; };
 		B527E9D92315AD9400DE51CC /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9D82315AD9400DE51CC /* RegistrationVC.swift */; };
+		B527E9E12316B98300DE51CC /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9E02316B98300DE51CC /* ProfileVC.swift */; };
+		B527E9E32316BAE000DE51CC /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9E22316BAE000DE51CC /* PostCell.swift */; };
+		B527E9E52316C1BC00DE51CC /* ViewReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9E42316C1BC00DE51CC /* ViewReviewVC.swift */; };
+		B527E9E72316DA2C00DE51CC /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9E62316DA2C00DE51CC /* SearchVC.swift */; };
+		B527E9E92316DB5200DE51CC /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9E82316DB5200DE51CC /* SearchCell.swift */; };
+		B527E9EB2316DD8300DE51CC /* CreateReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9EA2316DD8300DE51CC /* CreateReviewVC.swift */; };
+		B527E9ED2316DF1B00DE51CC /* ManageProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9EC2316DF1B00DE51CC /* ManageProfileVC.swift */; };
+		B548AE932316E20000357EA4 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548AE922316E1FF00357EA4 /* TabBarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +49,6 @@
 		6393029623158F8900B899F3 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		63930298231590F600B899F3 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		6393029A231591EB00B899F3 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		6393029E2316712800B899F3 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Montserrat; path = ../../../../../Downloads/Montserrat; sourceTree = "<group>"; };
 		B5166B1123142D750009EA8E /* Foodie Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foodie Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5166B1423142D750009EA8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5166B1623142D750009EA8E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -66,6 +72,14 @@
 		B5166B4A2314A2670009EA8E /* ReviewAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewAPIManager.swift; sourceTree = "<group>"; };
 		B5166B4C2314A7390009EA8E /* ReturnID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnID.swift; sourceTree = "<group>"; };
 		B527E9D82315AD9400DE51CC /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		B527E9E02316B98300DE51CC /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		B527E9E22316BAE000DE51CC /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		B527E9E42316C1BC00DE51CC /* ViewReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReviewVC.swift; sourceTree = "<group>"; };
+		B527E9E62316DA2C00DE51CC /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		B527E9E82316DB5200DE51CC /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		B527E9EA2316DD8300DE51CC /* CreateReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewVC.swift; sourceTree = "<group>"; };
+		B527E9EC2316DF1B00DE51CC /* ManageProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageProfileVC.swift; sourceTree = "<group>"; };
+		B548AE922316E1FF00357EA4 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +127,10 @@
 				B5166B31231445190009EA8E /* Networking */,
 				B5166B2A23142DA30009EA8E /* Storyboards */,
 				B5166B2B23142DA30009EA8E /* Resources */,
+				B5166B2F23142DA30009EA8E /* Views */,
 				B5166B2C23142DA30009EA8E /* View Controllers */,
 				B5166B2D23142DA30009EA8E /* Models */,
 				B5166B2E23142DA30009EA8E /* Model Controllers */,
-				B5166B2F23142DA30009EA8E /* Views */,
 				B5166B3023142DA30009EA8E /* Helpers */,
 			);
 			path = "Foodie Fun";
@@ -138,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				B5166B1E23142D770009EA8E /* Assets.xcassets */,
-				6393029E2316712800B899F3 /* Montserrat */,
 				B5166B2323142D770009EA8E /* Info.plist */,
 				B5166B1423142D750009EA8E /* AppDelegate.swift */,
 			);
@@ -149,7 +162,13 @@
 			isa = PBXGroup;
 			children = (
 				B5166B1623142D750009EA8E /* LoginVC.swift */,
+				B548AE922316E1FF00357EA4 /* TabBarVC.swift */,
 				B527E9D82315AD9400DE51CC /* RegistrationVC.swift */,
+				B527E9E02316B98300DE51CC /* ProfileVC.swift */,
+				B527E9E42316C1BC00DE51CC /* ViewReviewVC.swift */,
+				B527E9E62316DA2C00DE51CC /* SearchVC.swift */,
+				B527E9EA2316DD8300DE51CC /* CreateReviewVC.swift */,
+				B527E9EC2316DF1B00DE51CC /* ManageProfileVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -177,6 +196,8 @@
 		B5166B2F23142DA30009EA8E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B527E9E22316BAE000DE51CC /* PostCell.swift */,
+				B527E9E82316DB5200DE51CC /* SearchCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,7 +303,6 @@
 			files = (
 				B5166B2223142D770009EA8E /* LaunchScreen.storyboard in Resources */,
 				B5166B1F23142D770009EA8E /* Assets.xcassets in Resources */,
-				6393029F2316712800B899F3 /* Montserrat in Resources */,
 				63930299231590F600B899F3 /* Account.storyboard in Resources */,
 				B5166B1A23142D750009EA8E /* Main.storyboard in Resources */,
 				6393029B231591EB00B899F3 /* Search.storyboard in Resources */,
@@ -338,14 +358,19 @@
 			files = (
 				B5166B3D231477FA0009EA8E /* LoginRequest.swift in Sources */,
 				B5166B372314491F0009EA8E /* SettingsController.swift in Sources */,
+				B527E9ED2316DF1B00DE51CC /* ManageProfileVC.swift in Sources */,
 				B5166B1723142D750009EA8E /* LoginVC.swift in Sources */,
+				B527E9E12316B98300DE51CC /* ProfileVC.swift in Sources */,
 				B5166B49231499550009EA8E /* UserAPIManager.swift in Sources */,
+				B527E9E52316C1BC00DE51CC /* ViewReviewVC.swift in Sources */,
 				B5166B33231445380009EA8E /* Service.swift in Sources */,
+				B548AE932316E20000357EA4 /* TabBarVC.swift in Sources */,
 				B5166B35231447C80009EA8E /* Router.swift in Sources */,
 				B5166B4D2314A7390009EA8E /* ReturnID.swift in Sources */,
 				B5166B4323148C7B0009EA8E /* ReviewRequest.swift in Sources */,
 				B5166B3F23147C110009EA8E /* Extensions.swift in Sources */,
 				B5166B4B2314A2670009EA8E /* ReviewAPIManager.swift in Sources */,
+				B527E9E72316DA2C00DE51CC /* SearchVC.swift in Sources */,
 				B5166B3B23144E580009EA8E /* FoodieRouter.swift in Sources */,
 				B5166B4523148E5D0009EA8E /* Review.swift in Sources */,
 				B5166B1523142D750009EA8E /* AppDelegate.swift in Sources */,
@@ -354,6 +379,9 @@
 				B5166B3923144C2B0009EA8E /* JSONParameterEncoder.swift in Sources */,
 				B5166B1D23142D750009EA8E /* Foodie_Fun.xcdatamodeld in Sources */,
 				B5166B4123147C560009EA8E /* Login.swift in Sources */,
+				B527E9E32316BAE000DE51CC /* PostCell.swift in Sources */,
+				B527E9EB2316DD8300DE51CC /* CreateReviewVC.swift in Sources */,
+				B527E9E92316DB5200DE51CC /* SearchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
