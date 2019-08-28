@@ -6,8 +6,20 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-RegularItalic.ttf">
+            <string>Montserrat-Italic</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Account-->
         <scene sceneID="WPo-CA-eNA">
@@ -17,7 +29,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtp-hg-WPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="-847"/>
+            <point key="canvasLocation" x="1480" y="-886"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="BDw-8e-ZcV">
@@ -31,6 +43,7 @@
                     <connections>
                         <segue destination="lHN-Gd-K8X" kind="relationship" relationship="viewControllers" id="RhM-ip-het"/>
                         <segue destination="SQa-fQ-cjH" kind="relationship" relationship="viewControllers" id="kMp-qx-ieL"/>
+                        <segue destination="IbR-Mw-SeC" kind="relationship" relationship="viewControllers" id="6dR-FC-o7u"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dC-N1-GP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -45,7 +58,84 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gub-oZ-azm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1675" y="64"/>
+            <point key="canvasLocation" x="2302" y="290"/>
+        </scene>
+        <!--Create Post-->
+        <scene sceneID="gYM-M0-TXo">
+            <objects>
+                <viewController id="IbR-Mw-SeC" customClass="CreateReviewVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fgb-lZ-5hW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yLz-QF-rUw">
+                                <rect key="frame" x="60" y="342" width="294" height="279"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akh-I5-Fe7">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="31"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                        <color key="tintColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Add Photo"/>
+                                        <connections>
+                                            <action selector="addPhotoBtnTapped:" destination="IbR-Mw-SeC" eventType="touchUpInside" id="xUg-Fs-HS1"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5.0 Rating" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEj-LV-a4B">
+                                        <rect key="frame" x="0.0" y="51" width="294" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Resturant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mxP-YP-jsX">
+                                        <rect key="frame" x="0.0" y="101" width="294" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Gs-bX-5w2">
+                                        <rect key="frame" x="0.0" y="151" width="294" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Italic" family="Montserrat" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0cB-Sj-Nwp">
+                                <rect key="frame" x="60" y="130" width="294" height="171"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yLz-QF-rUw" firstAttribute="centerX" secondItem="fgb-lZ-5hW" secondAttribute="centerX" id="3P3-P1-E5b"/>
+                            <constraint firstItem="yLz-QF-rUw" firstAttribute="centerX" secondItem="fgb-lZ-5hW" secondAttribute="centerX" id="Ft6-Ec-VvJ"/>
+                            <constraint firstItem="yLz-QF-rUw" firstAttribute="top" secondItem="0cB-Sj-Nwp" secondAttribute="bottom" constant="41" id="G5J-2u-8PE"/>
+                            <constraint firstItem="yLz-QF-rUw" firstAttribute="top" secondItem="fgb-lZ-5hW" secondAttribute="top" constant="342" id="H4c-Ud-Edf"/>
+                            <constraint firstItem="0cB-Sj-Nwp" firstAttribute="top" secondItem="nLW-hE-HPO" secondAttribute="top" constant="86" id="ejO-JO-36h"/>
+                            <constraint firstItem="yLz-QF-rUw" firstAttribute="leading" secondItem="nLW-hE-HPO" secondAttribute="leading" constant="60" id="erf-r4-pt4"/>
+                            <constraint firstItem="nLW-hE-HPO" firstAttribute="trailing" secondItem="yLz-QF-rUw" secondAttribute="trailing" constant="60" id="keL-br-Rhj"/>
+                            <constraint firstItem="0cB-Sj-Nwp" firstAttribute="leading" secondItem="nLW-hE-HPO" secondAttribute="leading" constant="60" id="sDs-Wq-exW"/>
+                            <constraint firstItem="nLW-hE-HPO" firstAttribute="bottom" secondItem="yLz-QF-rUw" secondAttribute="bottom" constant="192" id="sMW-mQ-Tfs"/>
+                            <constraint firstItem="nLW-hE-HPO" firstAttribute="trailing" secondItem="0cB-Sj-Nwp" secondAttribute="trailing" constant="60" id="ssv-07-CMl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nLW-hE-HPO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="1Z6-zp-yiT"/>
+                    <navigationItem key="navigationItem" title="Create Post" id="faP-bq-1hQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Omp-Xh-Cb5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="YtH-Hp-gyd"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="0cB-Sj-Nwp" id="E8M-JD-Wa7"/>
+                        <outlet property="ratingTextField" destination="mxP-YP-jsX" id="sXU-yZ-bxe"/>
+                        <outlet property="reviewTextView" destination="3Gs-bX-5w2" id="bdM-Ps-0qh"/>
+                        <outlet property="titleTextField" destination="aEj-LV-a4B" id="O3a-K6-5EY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7li-Ro-GY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863.7681159420292" y="-244.41964285714283"/>
         </scene>
     </scenes>
 </document>
