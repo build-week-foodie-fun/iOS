@@ -13,27 +13,24 @@
         <!--Edit Account-->
         <scene sceneID="W96-DN-obc">
             <objects>
-                <viewController id="h2K-1r-15a" sceneMemberID="viewController">
+                <viewController id="h2K-1r-15a" customClass="ManageProfileVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z7r-Li-2K7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="zw7-F9-NY8">
-                                <rect key="frame" x="87" y="220" width="240" height="242"/>
+                                <rect key="frame" x="87" y="220" width="240" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pt-DY-Irb">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAY-wd-vFk">
-                                        <rect key="frame" x="0.0" y="155" width="97" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN0-rz-wnY">
-                                        <rect key="frame" x="0.0" y="212" width="128" height="30"/>
+                                        <rect key="frame" x="0.0" y="155" width="128" height="30"/>
                                         <state key="normal" title="Add Profile Picture"/>
+                                        <connections>
+                                            <action selector="addPhotoBtnTapped:" destination="h2K-1r-15a" eventType="touchUpInside" id="cBM-dZ-XJl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -42,15 +39,18 @@
                         <viewLayoutGuide key="safeArea" id="haU-1D-7WU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Account" id="CPL-Qp-tZ1"/>
+                    <connections>
+                        <outlet property="imgView" destination="1pt-DY-Irb" id="Cf6-44-vER"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltc-9N-QHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3842" y="-2303"/>
         </scene>
-        <!--View Controller-->
+        <!--ProfileVC-->
         <scene sceneID="k8h-Ta-iKC">
             <objects>
-                <viewController id="W6l-ye-VHU" sceneMemberID="viewController">
+                <viewController id="W6l-ye-VHU" customClass="ProfileVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cND-as-aS6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,14 +73,38 @@
                                     <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3OO-DK-G2q">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3OO-DK-G2q" customClass="PostCell" customModule="Foodie_Fun" customModuleProvider="target">
                                         <rect key="frame" x="5" y="5" width="131" height="131"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="131" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LkG-5o-3gO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="131" height="131"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BuG-t7-YdO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="131" height="131"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="BuG-t7-YdO" firstAttribute="leading" secondItem="LkG-5o-3gO" secondAttribute="leading" id="5PU-Kl-7HJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BuG-t7-YdO" secondAttribute="trailing" id="FYD-hy-Ti3"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BuG-t7-YdO" secondAttribute="bottom" id="JpR-OZ-e2L"/>
+                                                        <constraint firstItem="BuG-t7-YdO" firstAttribute="top" secondItem="LkG-5o-3gO" secondAttribute="top" id="dsP-tf-0zf"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="LkG-5o-3gO" secondAttribute="bottom" id="8uK-wH-ya4"/>
+                                            <constraint firstItem="LkG-5o-3gO" firstAttribute="top" secondItem="3OO-DK-G2q" secondAttribute="top" id="Iie-p9-i2i"/>
+                                            <constraint firstAttribute="trailing" secondItem="LkG-5o-3gO" secondAttribute="trailing" id="Pxf-Ol-yJr"/>
+                                            <constraint firstItem="LkG-5o-3gO" firstAttribute="leading" secondItem="3OO-DK-G2q" secondAttribute="leading" id="eEq-Fq-trZ"/>
+                                        </constraints>
                                         <connections>
+                                            <outlet property="imgView" destination="BuG-t7-YdO" id="fR6-c8-pjb"/>
                                             <segue destination="s0M-wu-lep" kind="popoverPresentation" popoverAnchorView="3OO-DK-G2q" id="wlV-gx-ALb">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
@@ -115,15 +139,20 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="qOQ-yM-4tB" id="f9z-Ix-kta"/>
+                        <outlet property="imgView" destination="iWi-90-AjD" id="ojD-Nm-X7H"/>
+                        <outlet property="nameLbl" destination="Bmc-hh-3WW" id="Qiq-VZ-UCe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S8I-7A-Re2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3842.0289855072465" y="-1558.2589285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--View ReviewVC-->
         <scene sceneID="sLi-oT-r1Q">
             <objects>
-                <viewController id="s0M-wu-lep" sceneMemberID="viewController">
+                <viewController id="s0M-wu-lep" customClass="ViewReviewVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1sV-kV-icU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,6 +204,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JKU-wX-MH9"/>
                     </view>
+                    <connections>
+                        <outlet property="commentLbl" destination="HZ6-YM-zjI" id="Ad1-lb-qSa"/>
+                        <outlet property="imgView" destination="Esc-lq-YmP" id="doP-e1-hFY"/>
+                        <outlet property="ratingLbl" destination="and-QL-ABE" id="1eJ-0Z-HUV"/>
+                        <outlet property="titleLbl" destination="x84-jC-Xj6" id="jL5-tG-hU4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w7f-Kh-va0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,7 +218,7 @@
         <!--Create Post-->
         <scene sceneID="AQd-iL-AW0">
             <objects>
-                <viewController id="YAD-Dm-wSl" sceneMemberID="viewController">
+                <viewController id="YAD-Dm-wSl" customClass="CreateReviewVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oIn-mA-rsv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,9 +231,27 @@
                                 <rect key="frame" x="171" y="320" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Photo"/>
+                                <connections>
+                                    <action selector="addPhotoBtnTapped:" destination="YAD-Dm-wSl" eventType="touchUpInside" id="q6z-OO-PZf"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7n-cx-Dqe">
-                                <rect key="frame" x="87" y="358" width="240" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="38e-vZ-cA5">
+                                <rect key="frame" x="107" y="612" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ho9-c7-iYC">
+                                <rect key="frame" x="159" y="466" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVf-W3-Xd1">
+                                <rect key="frame" x="159" y="397" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -212,6 +265,12 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FmN-rp-dGb"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="wcL-4E-mxp"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="xuJ-Hc-fE7" id="lgp-DA-OSR"/>
+                        <outlet property="ratingTextField" destination="ho9-c7-iYC" id="MsB-5s-35D"/>
+                        <outlet property="reviewTextView" destination="38e-vZ-cA5" id="7ox-lS-xTC"/>
+                        <outlet property="titleTextField" destination="SVf-W3-Xd1" id="rEb-mi-rlr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggY-uz-p4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

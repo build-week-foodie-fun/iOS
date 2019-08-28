@@ -20,6 +20,7 @@ class SettingsController {
 	private let usernameKey = "username_key"
 	private let userPasswordKey = "user_password_key"
 	private let saveProfileKey = "save_profile_key"
+	private let freshInstallationKey = "fresh_installation_key"
 	
 	private(set) var userToken: String? {
 		get {
@@ -65,14 +66,16 @@ class SettingsController {
 		}
 	}
 	
-	//MARK: Life Cycle
-	
-	private init() {
-		//This allows to clear the keychain when is a fresh installation, in order to remove the saved passwords.
-		let freshInstallationKey = "FreshInstallation"
-		if defaults.value(forKey: freshInstallationKey) == nil {
-			_ = try? keychain.removeAll()
-			defaults.set(false, forKey: freshInstallationKey)
+	var isFreshInstall: Bool {
+		get {
+			guard let isFresh = defaults.value(forKey: freshInstallationKey) as? Bool else { return false }
+			return isFresh
+		}
+		set {
+			if !newValue {
+				userCredentials = nil
+			}
+			defaults.set(newValue, forKey: freshInstallationKey)
 		}
 	}
 	

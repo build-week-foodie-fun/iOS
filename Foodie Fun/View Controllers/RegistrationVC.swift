@@ -10,21 +10,69 @@ import UIKit
 
 class RegistrationVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	//MARK: - IBOutlets
+	
+	@IBOutlet weak var nameTextField: UITextField!
+	@IBOutlet weak var usernameTextField: UITextField!
+	@IBOutlet weak var passwordTextField: UITextField!
+	@IBOutlet weak var confirmPwTextField: UITextField!
+	
+	//MARK: - Properties
+	
+	
+	//MARK: - Life Cycle
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		
+	}
+	
+	//MARK: - IBActions
+	
+	@IBAction func CreateAccountBtnTapped(_ sender: Any) {
+		guard let username = usernameTextField.optionalText, let password = passwordTextField.optionalText, confirmPassword() else { return }
+		let loginRequest = LoginRequest(username: username, password: password)
+		
+		NetworkManager.shared.register(newUser: loginRequest) { (loginId, error) in
+			if let error = error {
+				NSLog(error)
+			}
+			
+			guard loginId != nil else { return }
+			SettingsController.shared.persist(credentials: loginRequest)
+			
+			DispatchQueue.main.async {
+				self.continuetoNextScreen()
+			}
+		}
+	}
+	
+	//MARK: - Helpers
+	
+	private func confirmPassword() -> Bool {
+		guard let password = passwordTextField.optionalText, let confirmPw = confirmPwTextField.optionalText, password == confirmPw else {
+			let alert = UIAlertController(title: "Passwords mismatch", message: nil, preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+				self.confirmPwTextField.text = ""
+				self.passwordTextField.text = ""
+				self.passwordTextField.becomeFirstResponder()
+			}))
+			self.present(alert, animated: true)
+			
+			return false
+		}
+		return true
+	}
+	
+	private func continuetoNextScreen() {
+		if SettingsController.shared.isFreshInstall {
+			navigationController?.popViewController(animated: true)
+		} else {
+			if let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
+				self.present(mainVC, animated: true, completion: nil)
+			}
+		}
+	}
+	
 }
