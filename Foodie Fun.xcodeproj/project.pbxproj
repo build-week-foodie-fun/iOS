@@ -11,6 +11,7 @@
 		6393029723158F8900B899F3 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6393029623158F8900B899F3 /* Onboarding.storyboard */; };
 		63930299231590F600B899F3 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63930298231590F600B899F3 /* Account.storyboard */; };
 		6393029B231591EB00B899F3 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6393029A231591EB00B899F3 /* Search.storyboard */; };
+		6393029F2316712800B899F3 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 6393029E2316712800B899F3 /* Montserrat */; };
 		B5166B1523142D750009EA8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B1423142D750009EA8E /* AppDelegate.swift */; };
 		B5166B1723142D750009EA8E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B1623142D750009EA8E /* LoginVC.swift */; };
 		B5166B1A23142D750009EA8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5166B1823142D750009EA8E /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		6393029623158F8900B899F3 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		63930298231590F600B899F3 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		6393029A231591EB00B899F3 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		6393029E2316712800B899F3 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Montserrat; path = ../../../../../Downloads/Montserrat; sourceTree = "<group>"; };
 		B5166B1123142D750009EA8E /* Foodie Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foodie Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5166B1423142D750009EA8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5166B1623142D750009EA8E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				B5166B1E23142D770009EA8E /* Assets.xcassets */,
+				6393029E2316712800B899F3 /* Montserrat */,
 				B5166B2323142D770009EA8E /* Info.plist */,
 				B5166B1423142D750009EA8E /* AppDelegate.swift */,
 			);
@@ -288,6 +291,7 @@
 			files = (
 				B5166B2223142D770009EA8E /* LaunchScreen.storyboard in Resources */,
 				B5166B1F23142D770009EA8E /* Assets.xcassets in Resources */,
+				6393029F2316712800B899F3 /* Montserrat in Resources */,
 				63930299231590F600B899F3 /* Account.storyboard in Resources */,
 				B5166B1A23142D750009EA8E /* Main.storyboard in Resources */,
 				6393029B231591EB00B899F3 /* Search.storyboard in Resources */,
