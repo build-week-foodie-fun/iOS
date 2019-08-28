@@ -15,7 +15,7 @@ class ViewReviewVC: UIViewController {
 	@IBOutlet weak var imgView: UIImageView!
 	@IBOutlet weak var titleLbl: UILabel!
 	@IBOutlet weak var ratingLbl: UILabel!
-	@IBOutlet weak var commentLbl: UILabel!
+	@IBOutlet weak var commentLbl: UITextView!
 	
 	//MARK: - Properties
 	
