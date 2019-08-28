@@ -69,8 +69,8 @@ class RegistrationVC: UIViewController {
 		if SettingsController.shared.isFreshInstall {
 			navigationController?.popViewController(animated: true)
 		} else {
-			if let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateInitialViewController() {
-				self.present(searchVC, animated: true, completion: nil)
+			if let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
+				self.present(mainVC, animated: true, completion: nil)
 			}
 		}
 	}

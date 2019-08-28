@@ -32,6 +32,7 @@ class LoginVC: UIViewController {
 		if let loginRequest = SettingsController.shared.userCredentials {
 			loginUser(loginRequest)
 		}
+		usernameTextField.becomeFirstResponder()
 	}
 	
 	//MARK: - IBActions
@@ -58,8 +59,8 @@ class LoginVC: UIViewController {
 			DispatchQueue.main.async {
 				if SettingsController.shared.isFreshInstall {
 					self.performSegue(withIdentifier: "TutorialSegue", sender: nil)
-				} else if let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateInitialViewController() {
-					self.present(searchVC, animated: true, completion: nil)
+				} else if let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
+					self.present(mainVC, animated: true, completion: nil)
 				}
 			}
 		}
