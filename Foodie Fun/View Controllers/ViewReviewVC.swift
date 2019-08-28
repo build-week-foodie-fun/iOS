@@ -37,9 +37,12 @@ class ViewReviewVC: UIViewController {
 	private func updateViews() {
 		guard let post = post else { return }
 		
-		imgView.loadImage(from: post.photoOfOrder)
 		titleLbl.text = post.itemName.capitalized
 		ratingLbl.text = "\(post.foodRating)/10"
 		commentLbl.text = post.comments
+		
+		guard let photoURL = URL(string: post.photoOfOrder) else { return }
+		
+		imgView.loadImage(from: photoURL)
 	}
 }

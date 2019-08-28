@@ -50,6 +50,9 @@ class ProfileVC: UIViewController {
 			guard let reviews = reviews else { return }
 			let loggedInUserId = SettingsController.shared.loggedInUser?.id
 			self.posts = reviews.filter({$0.userId == loggedInUserId})
+			DispatchQueue.main.async {
+				self.collectionView.reloadData()
+			}
 		}
 	}
 }

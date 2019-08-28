@@ -18,8 +18,8 @@ extension NetworkManager {
 	
 	func getAllReviews(completion: @escaping (_ reviews: [Review]?, _ error: String?) -> Void) {
 		router.request(.getReviews) { (data, response, error) in
-			let returnRequest = self.getArray(data, response, error, Review.self)
-			completion(returnRequest.0, returnRequest.1)
+			let returnRequest = self.getObject(data, response, error, UnnecessaryWrapper.self)
+			completion(returnRequest.0?.data, returnRequest.1)
 		}
 	}
 	

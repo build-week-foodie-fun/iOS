@@ -20,7 +20,7 @@ enum NetworkResponse: String {
 	case outdated = "The url you requested is outdated."
 	case failed = "Network request failed."
 	case noData = "Response returned with no data to decode."
-	case unableToDecode = "We could no decode the response."
+	case unableToDecode = "Could not decode the response."
 	
 	static func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String> {
 		switch response.statusCode {
@@ -57,6 +57,7 @@ struct NetworkManager {
 					let apiResponse = try decoder.decode(returnType, from: responseData)
 					return (apiResponse, nil)
 				} catch {
+					NSLog("\(error)")
 					return (nil, NetworkResponse.unableToDecode.rawValue)
 				}
 			case .failure(let networkFailureError):
