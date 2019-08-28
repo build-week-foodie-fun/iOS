@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="1438" y="-847"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab BarVC-->
         <scene sceneID="BDw-8e-ZcV">
             <objects>
-                <tabBarController id="uAi-nv-V61" sceneMemberID="viewController">
+                <tabBarController id="uAi-nv-V61" customClass="TabBarVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yUS-91-h0D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

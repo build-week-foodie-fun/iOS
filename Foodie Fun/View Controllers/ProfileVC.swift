@@ -12,6 +12,7 @@ class ProfileVC: UIViewController {
 
 	//MARK: - IBOutlets
 	
+	@IBOutlet weak var imgView: UIImageView!
 	@IBOutlet weak var collectionView: UICollectionView!
 	@IBOutlet weak var nameLbl: UILabel!
 	
