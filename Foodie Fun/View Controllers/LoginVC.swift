@@ -20,19 +20,23 @@ class LoginVC: UIViewController {
 	
 	//MARK: - Life Cycle
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		SettingsController.shared.isSaveCredentials = true
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(true)
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 		
 		if let loginRequest = SettingsController.shared.userCredentials {
 			loginUser(loginRequest)
 		}
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(true)
 		usernameTextField.becomeFirstResponder()
+	}
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		SettingsController.shared.isSaveCredentials = true
 	}
 	
 	//MARK: - IBActions

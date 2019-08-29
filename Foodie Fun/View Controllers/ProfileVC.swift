@@ -22,11 +22,17 @@ class ProfileVC: UIViewController {
 	
 	//MARK: - Life Cycle
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		updateViews()
+		loadPosts()
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		collectionView.dataSource = self
-		loadPosts()
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,6 +47,10 @@ class ProfileVC: UIViewController {
 	
 	//MARK: - Helpers
 	
+	private func updateViews() {
+		nameLbl.text = SettingsController.shared.loggedInUser?.username
+	}
+	
 	private func loadPosts() {
 		NetworkManager.shared.getAllReviews { (reviews, error) in
 			if let error = error {
@@ -50,6 +60,9 @@ class ProfileVC: UIViewController {
 			guard let reviews = reviews else { return }
 			let loggedInUserId = SettingsController.shared.loggedInUser?.id
 			self.posts = reviews.filter({$0.userId == loggedInUserId})
+			DispatchQueue.main.async {
+				self.collectionView.reloadData()
+			}
 		}
 	}
 }
