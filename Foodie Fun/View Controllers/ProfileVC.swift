@@ -25,6 +25,7 @@ class ProfileVC: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
+		updateViews()
 		loadPosts()
 	}
 	
@@ -45,6 +46,11 @@ class ProfileVC: UIViewController {
 	
 	
 	//MARK: - Helpers
+	
+	private func updateViews() {
+		imgView.image = UIImage(named: "profile")
+		nameLbl.text = SettingsController.shared.loggedInUser?.username
+	}
 	
 	private func loadPosts() {
 		NetworkManager.shared.getAllReviews { (reviews, error) in

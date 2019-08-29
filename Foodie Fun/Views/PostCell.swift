@@ -28,6 +28,9 @@ class PostCell: UICollectionViewCell {
 	//MARK: - Helpers
 	
 	private func configCell() {
+		imgView.layer.borderWidth = 1
+		imgView.layer.borderColor = UIColor.lightGray.cgColor
+		
 		guard let post = post, let photoURL = URL(string: post.photoOfOrder) else { return }
 		
 		imgView.loadImage(from: photoURL)
