@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum Tabs: Int {
+	case profile = 0
+	case search
+}
+
 class TabBarVC: UITabBarController {
 
 	//MARK: - IBOutlets

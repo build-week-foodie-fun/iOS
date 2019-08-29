@@ -22,11 +22,16 @@ class ProfileVC: UIViewController {
 	
 	//MARK: - Life Cycle
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		loadPosts()
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		collectionView.dataSource = self
-		loadPosts()
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
