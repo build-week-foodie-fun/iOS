@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Montserrat-ExtraBold.ttf">
-            <string>Montserrat-ExtraBold</string>
-        </array>
         <array key="Montserrat-Medium.ttf">
             <string>Montserrat-Medium</string>
         </array>
@@ -29,31 +26,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="dKa-1E-em7">
-                                <rect key="frame" x="40" y="338" width="334" height="191"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="dKa-1E-em7">
+                                <rect key="frame" x="20.5" y="177" width="373" height="542"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="FoodieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="a8W-JG-Ssk">
+                                        <rect key="frame" x="13.5" y="0.0" width="346" height="297"/>
+                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1Wz-1F-L1l">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="75"/>
+                                        <rect key="frame" x="37.5" y="337" width="298" height="75"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCk-5j-6Ln">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="298" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5D-Jg-QAs">
-                                                <rect key="frame" x="0.0" y="45" width="334" height="30"/>
+                                                <rect key="frame" x="0.0" y="45" width="298" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L4h-6Y-g1B">
-                                        <rect key="frame" x="0.0" y="115" width="334" height="76"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L4h-6Y-g1B">
+                                        <rect key="frame" x="67.5" y="452" width="238" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPe-zA-dDK">
-                                                <rect key="frame" x="50" y="0.0" width="234" height="33"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPe-zA-dDK" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                 <color key="tintColor" red="0.95120667049999996" green="0.94661146920000006" blue="0.95580187179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -62,8 +62,8 @@
                                                     <action selector="signInBtnTapped:" destination="8vc-1H-9b7" eventType="touchUpInside" id="F77-PP-NOF"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-rm-Rme">
-                                                <rect key="frame" x="50" y="43" width="234" height="33"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-rm-Rme" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="238" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                 <color key="tintColor" red="0.95120667049999996" green="0.94661146920000006" blue="0.95580187179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -73,30 +73,21 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="EPe-zA-dDK" secondAttribute="trailing" constant="50" id="0TL-Hf-Y0G"/>
-                                            <constraint firstItem="CK0-rm-Rme" firstAttribute="leading" secondItem="L4h-6Y-g1B" secondAttribute="leading" constant="50" id="I6R-hc-SVD"/>
-                                            <constraint firstAttribute="trailing" secondItem="CK0-rm-Rme" secondAttribute="trailing" constant="50" id="Mgx-PV-Yb3"/>
-                                            <constraint firstItem="EPe-zA-dDK" firstAttribute="leading" secondItem="L4h-6Y-g1B" secondAttribute="leading" constant="50" id="ZE5-hu-8um"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="L4h-6Y-g1B" firstAttribute="width" secondItem="1Wz-1F-L1l" secondAttribute="width" multiplier="0.8" id="Mdb-eu-Pjj"/>
+                                    <constraint firstItem="1Wz-1F-L1l" firstAttribute="width" secondItem="dKa-1E-em7" secondAttribute="width" multiplier="0.8" id="bZO-85-pgS"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Foodie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfw-M1-gtM">
-                                <rect key="frame" x="153" y="206" width="109" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dfN-J2-Y62" firstAttribute="trailing" secondItem="dKa-1E-em7" secondAttribute="trailing" constant="40" id="D6S-vx-cIS"/>
-                            <constraint firstItem="dKa-1E-em7" firstAttribute="top" secondItem="dfN-J2-Y62" secondAttribute="top" constant="250" id="Unb-AG-tbv"/>
-                            <constraint firstItem="dKa-1E-em7" firstAttribute="leading" secondItem="dfN-J2-Y62" secondAttribute="leading" constant="40" id="etH-vd-fhF"/>
-                            <constraint firstItem="dKa-1E-em7" firstAttribute="centerX" secondItem="PL3-4q-fSj" secondAttribute="centerX" id="llq-DA-Jof"/>
+                            <constraint firstItem="dKa-1E-em7" firstAttribute="height" secondItem="dfN-J2-Y62" secondAttribute="height" multiplier="0.7" id="Mu6-xJ-bVO"/>
+                            <constraint firstItem="dKa-1E-em7" firstAttribute="width" secondItem="dfN-J2-Y62" secondAttribute="width" multiplier="0.9" id="TuB-FL-K7k"/>
+                            <constraint firstItem="dKa-1E-em7" firstAttribute="centerY" secondItem="PL3-4q-fSj" secondAttribute="centerY" id="WnY-L1-Lcc"/>
+                            <constraint firstItem="dKa-1E-em7" firstAttribute="centerX" secondItem="PL3-4q-fSj" secondAttribute="centerX" id="dcx-NI-UWg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dfN-J2-Y62"/>
                     </view>
@@ -118,35 +109,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lD3-0J-Qov">
-                                <rect key="frame" x="50" y="305" width="314" height="273"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lD3-0J-Qov">
+                                <rect key="frame" x="50" y="305" width="314" height="220"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4b-Eu-dXw">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-S0-mEY">
-                                        <rect key="frame" x="0.0" y="60" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-1n-nDe">
-                                        <rect key="frame" x="0.0" y="120" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="60" width="314" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xcq-Cm-mCl">
-                                        <rect key="frame" x="0.0" y="180" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="120" width="314" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFH-HF-nTb">
-                                        <rect key="frame" x="0.0" y="240" width="314" height="33"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFH-HF-nTb" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="180" width="220" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                         <color key="tintColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -157,6 +142,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xcq-Cm-mCl" firstAttribute="width" secondItem="cpA-1n-nDe" secondAttribute="width" id="G1a-su-7ko"/>
+                                    <constraint firstItem="bx9-S0-mEY" firstAttribute="width" secondItem="lD3-0J-Qov" secondAttribute="width" id="GyT-Vg-7Pn"/>
+                                    <constraint firstItem="cpA-1n-nDe" firstAttribute="width" secondItem="bx9-S0-mEY" secondAttribute="width" id="SoJ-88-A5K"/>
+                                    <constraint firstItem="qFH-HF-nTb" firstAttribute="width" secondItem="lD3-0J-Qov" secondAttribute="width" multiplier="0.7" id="V32-Ai-ZRn"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -171,7 +162,6 @@
                     <navigationItem key="navigationItem" title="Create Account" id="Vzx-Ga-Qcm"/>
                     <connections>
                         <outlet property="confirmPwTextField" destination="Xcq-Cm-mCl" id="7Jc-Ea-SLN"/>
-                        <outlet property="nameTextField" destination="G4b-Eu-dXw" id="bti-fd-ftq"/>
                         <outlet property="passwordTextField" destination="cpA-1n-nDe" id="q6T-uG-OAW"/>
                         <outlet property="usernameTextField" destination="bx9-S0-mEY" id="6qn-G6-Uzq"/>
                     </connections>
@@ -200,12 +190,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw_file_searching_duff (1)" translatesAutoresizingMaskIntoConstraints="NO" id="E9v-aC-JzV">
                                 <rect key="frame" x="20" y="168" width="374" height="219"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zf-pF-kjh">
-                                <rect key="frame" x="48" y="684" width="318" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zf-pF-kjh" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                <rect key="frame" x="48" y="683" width="318" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="8bq-Ss-0S6"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -249,7 +236,7 @@
                                 <rect key="frame" x="20" y="163" width="374" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rE-5l-UtX">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rE-5l-UtX" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
                                 <rect key="frame" x="48" y="676" width="319" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -291,7 +278,7 @@
                                 <rect key="frame" x="20" y="164" width="374" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuK-rJ-FUd">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuK-rJ-FUd" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
                                 <rect key="frame" x="48" y="675" width="319" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -360,6 +347,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FoodieLogo" width="346" height="496"/>
         <image name="undraw_file_searching_duff (1)" width="1082" height="939"/>
         <image name="undraw_loving_it_y27c" width="1144" height="874"/>
         <image name="undraw_party_lqnv" width="945" height="879"/>
