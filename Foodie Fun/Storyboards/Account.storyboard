@@ -295,62 +295,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5yV-U2-YG4">
-                                <rect key="frame" x="60" y="342" width="294" height="279"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="0PS-gp-UK3">
+                                <rect key="frame" x="0.0" y="122" width="414" height="652.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-Zd-h84">
-                                        <rect key="frame" x="0.0" y="0.0" width="294" height="31"/>
-                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
-                                        <color key="tintColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Add Photo"/>
-                                        <connections>
-                                            <action selector="addPhotoBtnTapped:" destination="GuN-Hd-CWx" eventType="touchUpInside" id="8Fy-ye-cQt"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Resturant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9oa-Tm-LfG">
-                                        <rect key="frame" x="0.0" y="51" width="294" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Resturant Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdD-Fm-oG2">
-                                        <rect key="frame" x="0.0" y="101" width="294" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rating (e.g 5.0)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-AA-oZk">
-                                        <rect key="frame" x="0.0" y="151" width="294" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uNG-NZ-2Ux">
-                                        <rect key="frame" x="0.0" y="201" width="294" height="78"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Italic" family="Montserrat" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-de-Vhz">
+                                        <rect key="frame" x="24.5" y="0.0" width="365" height="330.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iK0-9h-A2o">
+                                                <rect key="frame" x="0.0" y="0.0" width="365" height="275.5"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-Zd-h84">
+                                                <rect key="frame" x="0.0" y="290.5" width="365" height="40"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="KSl-hY-oxM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                                <color key="tintColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Add Photo"/>
+                                                <connections>
+                                                    <action selector="addPhotoBtnTapped:" destination="GuN-Hd-CWx" eventType="touchUpInside" id="8Fy-ye-cQt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5yV-U2-YG4">
+                                        <rect key="frame" x="24.5" y="391.5" width="365" height="261"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Resturant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9oa-Tm-LfG">
+                                                <rect key="frame" x="0.0" y="0.0" width="365" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Resturant Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdD-Fm-oG2">
+                                                <rect key="frame" x="0.0" y="50" width="365" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oCd-kv-ptO">
+                                                <rect key="frame" x="0.0" y="100" width="365" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rating (e.g 5.0)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-AA-oZk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGT-yx-pBX">
+                                                        <rect key="frame" x="187.5" y="0.0" width="177.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Add Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uNG-NZ-2Ux">
+                                                <rect key="frame" x="0.0" y="150" width="365" height="111"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Italic" family="Montserrat" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="5yV-U2-YG4" firstAttribute="width" secondItem="0PS-gp-UK3" secondAttribute="width" multiplier="0.8" constant="34.199999999999989" id="5NF-w0-qRr"/>
+                                    <constraint firstItem="5yV-U2-YG4" firstAttribute="height" secondItem="0PS-gp-UK3" secondAttribute="height" multiplier="0.4" id="LHO-Z8-Bib"/>
+                                </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iK0-9h-A2o">
-                                <rect key="frame" x="60" y="174" width="294" height="127"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iK0-9h-A2o" firstAttribute="leading" secondItem="fyB-yG-rcX" secondAttribute="leading" constant="60" id="9e0-s0-lkX"/>
-                            <constraint firstItem="5yV-U2-YG4" firstAttribute="leading" secondItem="fyB-yG-rcX" secondAttribute="leading" constant="60" id="UgW-tG-NVy"/>
-                            <constraint firstItem="5yV-U2-YG4" firstAttribute="centerX" secondItem="0Yi-6h-PJ5" secondAttribute="centerX" id="d4s-u9-jVN"/>
-                            <constraint firstItem="5yV-U2-YG4" firstAttribute="top" secondItem="iK0-9h-A2o" secondAttribute="bottom" constant="41" id="dKf-Yi-uxY"/>
-                            <constraint firstItem="fyB-yG-rcX" firstAttribute="bottom" secondItem="5yV-U2-YG4" secondAttribute="bottom" constant="192" id="hda-8b-vEL"/>
-                            <constraint firstItem="5yV-U2-YG4" firstAttribute="top" secondItem="0Yi-6h-PJ5" secondAttribute="top" constant="342" id="irj-Cq-dkY"/>
-                            <constraint firstItem="iK0-9h-A2o" firstAttribute="top" secondItem="fyB-yG-rcX" secondAttribute="top" constant="86" id="mps-hw-Z6R"/>
-                            <constraint firstItem="fyB-yG-rcX" firstAttribute="trailing" secondItem="iK0-9h-A2o" secondAttribute="trailing" constant="60" id="o9H-tc-anc"/>
-                            <constraint firstItem="fyB-yG-rcX" firstAttribute="trailing" secondItem="5yV-U2-YG4" secondAttribute="trailing" constant="60" id="xvB-Sf-Heg"/>
-                            <constraint firstItem="5yV-U2-YG4" firstAttribute="centerX" secondItem="0Yi-6h-PJ5" secondAttribute="centerX" id="zcy-Go-6nd"/>
+                            <constraint firstItem="0PS-gp-UK3" firstAttribute="centerX" secondItem="0Yi-6h-PJ5" secondAttribute="centerX" id="644-87-Ugf"/>
+                            <constraint firstItem="0PS-gp-UK3" firstAttribute="centerY" secondItem="0Yi-6h-PJ5" secondAttribute="centerY" id="JJF-qb-6dh"/>
+                            <constraint firstItem="0PS-gp-UK3" firstAttribute="width" secondItem="fyB-yG-rcX" secondAttribute="width" id="s9t-UV-wyy"/>
+                            <constraint firstItem="0PS-gp-UK3" firstAttribute="height" secondItem="fyB-yG-rcX" secondAttribute="height" multiplier="0.9" id="uqG-cj-FQR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fyB-yG-rcX"/>
                     </view>
@@ -368,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyc-uL-Yiu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4696" y="-836"/>
+            <point key="canvasLocation" x="4695.652173913044" y="-836.38392857142856"/>
         </scene>
     </scenes>
     <resources>
