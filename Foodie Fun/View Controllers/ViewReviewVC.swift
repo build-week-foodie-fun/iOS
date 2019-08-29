@@ -19,7 +19,7 @@ class ViewReviewVC: UIViewController {
 	
 	//MARK: - Properties
 	
-	var post: Review?
+	var review: Review?
 	
 	//MARK: - Life Cycle
 	
@@ -29,10 +29,16 @@ class ViewReviewVC: UIViewController {
 		updateViews()
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let manageReviewVC = segue.destination as? manageReviewVC {
+			manageReviewVC.review = review
+		}
+	}
+	
 	//MARK: - IBActions
 	
 	@IBAction func deleteReview(_ sender: Any) {
-		guard let post = post else { return }
+		guard let post = review else { return }
 		
 		let confirmAlert = UIAlertController(title: "Delete Review", message: "Are you sure you would like to delete this review?", preferredStyle: .alert)
 		let confirmAction = UIAlertAction(title: "confirm", style: .destructive) { (_) in
@@ -55,7 +61,7 @@ class ViewReviewVC: UIViewController {
 	//MARK: - Helpers
 	
 	private func updateViews() {
-		guard let post = post else { return }
+		guard let post = review else { return }
 		
 		titleLbl.text = post.itemName.capitalized
 		ratingLbl.text = "\(post.foodRating)/10"

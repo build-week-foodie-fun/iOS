@@ -1,5 +1,5 @@
 //
-//  CreateReviewVC.swift
+//  manageReviewVC.swift
 //  Foodie Fun
 //
 //  Created by Jeffrey Santana on 8/28/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateReviewVC: UIViewController {
+class manageReviewVC: UIViewController {
 
 	//MARK: - IBOutlets
 	
@@ -27,6 +27,7 @@ class CreateReviewVC: UIViewController {
 									How did you order it?
 									What did you think after the first bite?
 									"""
+	var review: Review?
 	
 	//MARK: - Life Cycle
 	
@@ -34,6 +35,8 @@ class CreateReviewVC: UIViewController {
 		super.viewDidLoad()
 		
 		configViews()
+		updateViews()
+		loadReview()
 	}
 	
 	//MARK: - IBActions
@@ -57,32 +60,54 @@ class CreateReviewVC: UIViewController {
 	
 	private func configViews() {
 		ratingTextField.delegate = self
-//		priceTextField.delegate = self
-//		waitTimeTextField.delegate = self
+		priceTextField.delegate = self
+		waitTimeTextField.delegate = self
 		
 		setupTextView()
 	}
 	
+	private func updateViews() {
+		guard let review = review else { return }
+		title = "Edit Review"
+		if !review.comments.isEmpty {
+			reviewTextView.textColor = .black
+		}
+	}
+	
+	private func loadReview() {
+		guard let review = review else { return }
+		
+		if let imgUrl = URL(string: review.photoOfOrder) {
+			imgView.loadImage(from: imgUrl)
+		}
+		restaurantTextField.text = review.restaurantName
+		restaurantTypeTextField.text = review.restaurantType
+		priceTextField.text = "\(review.price)"
+		waitTimeTextField.text = review.waitTime
+		ratingTextField.text = "\(review.foodRating)"
+		reviewTextView.text = review.comments
+	}
+	
 	private func newReview() -> ReviewRequest? {
 		guard
-//			let restaurant = restaurantTextField.optionalText,
-//			let restaurantType = restaurantTypeTextField.optionalText,
+			let restaurant = restaurantTextField.optionalText,
+			let restaurantType = restaurantTypeTextField.optionalText,
 			let title = titleTextField.optionalText,
 			let rating = ratingTextField.toDouble,
 			let review = reviewTextView.text,
-//			let price = priceTextField.toDouble,
-//			let waitTime = waitTimeTextField.optionalText,
+			let price = priceTextField.toDouble,
+			let waitTime = waitTimeTextField.optionalText,
 			let loggedInUserId = SettingsController.shared.loggedInUser?.id
 			else { return nil }
 		
-		return ReviewRequest(restaurantName: "L' Jeff", restaurantType: "Dominican Chiq", userId: loggedInUserId, itemName: title, photoOfOrder: "https://www.pngfind.com/mpng/bRmhm_food-icon-food-icon-transparent-gif-hd-png/", foodRating: rating, comments: review, price: 25.00, waitTime: "20", dateOfVisit: "")
+//		return ReviewRequest(restaurantName: "L' Jeff", restaurantType: "Dominican Chiq", userId: loggedInUserId, itemName: title, photoOfOrder: "https://www.pngfind.com/mpng/bRmhm_food-icon-food-icon-transparent-gif-hd-png/", foodRating: rating, comments: review, price: 25.00, waitTime: "20", dateOfVisit: "")
 		
-//		return ReviewRequest(restaurantName: restaurant, restaurantType: restaurantType, userId: loggedInUserId, itemName: title, photoOfOrder: "", foodRating: rating, comments: review, price: price, waitTime: waitTime, dateOfVisit: "")
+		return ReviewRequest(restaurantName: restaurant, restaurantType: restaurantType, userId: loggedInUserId, itemName: title, photoOfOrder: "https://www.pngfind.com/mpng/bRmhm_food-icon-food-icon-transparent-gif-hd-png/", foodRating: rating, comments: review, price: price, waitTime: waitTime, dateOfVisit: "")
 	}
 	
 }
 
-extension CreateReviewVC: UITextFieldDelegate {
+extension manageReviewVC: UITextFieldDelegate {
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 		if textField == priceTextField || textField == ratingTextField {
 			let allowedCharacters = CharacterSet(charactersIn:"0123456789.")
@@ -101,7 +126,7 @@ extension CreateReviewVC: UITextFieldDelegate {
 	}
 }
 
-extension CreateReviewVC: UITextViewDelegate {
+extension manageReviewVC: UITextViewDelegate {
 	
 	private func setupTextView() {
 		reviewTextView.delegate = self
@@ -112,16 +137,16 @@ extension CreateReviewVC: UITextViewDelegate {
 	}
 	
 	func textViewDidBeginEditing(_ textView: UITextView) {
-		if textView.textColor == UIColor.lightGray {
+		if textView.textColor == .lightGray {
 			textView.text = nil
-			textView.textColor = UIColor.black
+			textView.textColor = .black
 		}
 	}
 	
 	func textViewDidEndEditing(_ textView: UITextView) {
 		if textView.text.isEmpty {
 			textView.text = textViewPlaceholder
-			textView.textColor = UIColor.lightGray
+			textView.textColor = .lightGray
 		}
 	}
 }

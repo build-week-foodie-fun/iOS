@@ -32,13 +32,15 @@
 		B5166B49231499550009EA8E /* UserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B48231499550009EA8E /* UserAPIManager.swift */; };
 		B5166B4B2314A2670009EA8E /* ReviewAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B4A2314A2670009EA8E /* ReviewAPIManager.swift */; };
 		B5166B4D2314A7390009EA8E /* ReturnID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5166B4C2314A7390009EA8E /* ReturnID.swift */; };
+		B526B08223185EFC00839E1C /* BorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526B08123185EFC00839E1C /* BorderLabel.swift */; };
+		B526B0842318622F00839E1C /* BorderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526B0832318622F00839E1C /* BorderTextView.swift */; };
 		B527E9D92315AD9400DE51CC /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9D82315AD9400DE51CC /* RegistrationVC.swift */; };
 		B527E9E12316B98300DE51CC /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9E02316B98300DE51CC /* ProfileVC.swift */; };
 		B527E9E32316BAE000DE51CC /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9E22316BAE000DE51CC /* PostCell.swift */; };
 		B527E9E52316C1BC00DE51CC /* ViewReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9E42316C1BC00DE51CC /* ViewReviewVC.swift */; };
 		B527E9E72316DA2C00DE51CC /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9E62316DA2C00DE51CC /* SearchVC.swift */; };
 		B527E9E92316DB5200DE51CC /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9E82316DB5200DE51CC /* SearchCell.swift */; };
-		B527E9EB2316DD8300DE51CC /* CreateReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9EA2316DD8300DE51CC /* CreateReviewVC.swift */; };
+		B527E9EB2316DD8300DE51CC /* manageReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9EA2316DD8300DE51CC /* manageReviewVC.swift */; };
 		B527E9ED2316DF1B00DE51CC /* ManageProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9EC2316DF1B00DE51CC /* ManageProfileVC.swift */; };
 		B548AE932316E20000357EA4 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548AE922316E1FF00357EA4 /* TabBarVC.swift */; };
 /* End PBXBuildFile section */
@@ -73,13 +75,15 @@
 		B5166B48231499550009EA8E /* UserAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIManager.swift; sourceTree = "<group>"; };
 		B5166B4A2314A2670009EA8E /* ReviewAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewAPIManager.swift; sourceTree = "<group>"; };
 		B5166B4C2314A7390009EA8E /* ReturnID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnID.swift; sourceTree = "<group>"; };
+		B526B08123185EFC00839E1C /* BorderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderLabel.swift; sourceTree = "<group>"; };
+		B526B0832318622F00839E1C /* BorderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderTextView.swift; sourceTree = "<group>"; };
 		B527E9D82315AD9400DE51CC /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		B527E9E02316B98300DE51CC /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		B527E9E22316BAE000DE51CC /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B527E9E42316C1BC00DE51CC /* ViewReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReviewVC.swift; sourceTree = "<group>"; };
 		B527E9E62316DA2C00DE51CC /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		B527E9E82316DB5200DE51CC /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
-		B527E9EA2316DD8300DE51CC /* CreateReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewVC.swift; sourceTree = "<group>"; };
+		B527E9EA2316DD8300DE51CC /* manageReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manageReviewVC.swift; sourceTree = "<group>"; };
 		B527E9EC2316DF1B00DE51CC /* ManageProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageProfileVC.swift; sourceTree = "<group>"; };
 		B548AE922316E1FF00357EA4 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,7 +173,7 @@
 				B548AE922316E1FF00357EA4 /* TabBarVC.swift */,
 				B527E9E02316B98300DE51CC /* ProfileVC.swift */,
 				B527E9E42316C1BC00DE51CC /* ViewReviewVC.swift */,
-				B527E9EA2316DD8300DE51CC /* CreateReviewVC.swift */,
+				B527E9EA2316DD8300DE51CC /* manageReviewVC.swift */,
 				B527E9E62316DA2C00DE51CC /* SearchVC.swift */,
 				B527E9EC2316DF1B00DE51CC /* ManageProfileVC.swift */,
 			);
@@ -201,6 +205,8 @@
 			children = (
 				B527E9E22316BAE000DE51CC /* PostCell.swift */,
 				B527E9E82316DB5200DE51CC /* SearchCell.swift */,
+				B526B08123185EFC00839E1C /* BorderLabel.swift */,
+				B526B0832318622F00839E1C /* BorderTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				B5166B372314491F0009EA8E /* SettingsController.swift in Sources */,
 				B527E9ED2316DF1B00DE51CC /* ManageProfileVC.swift in Sources */,
 				B5166B1723142D750009EA8E /* LoginVC.swift in Sources */,
+				B526B08223185EFC00839E1C /* BorderLabel.swift in Sources */,
 				B527E9E12316B98300DE51CC /* ProfileVC.swift in Sources */,
 				B5166B49231499550009EA8E /* UserAPIManager.swift in Sources */,
 				B527E9E52316C1BC00DE51CC /* ViewReviewVC.swift in Sources */,
@@ -380,11 +387,12 @@
 				B5166B1523142D750009EA8E /* AppDelegate.swift in Sources */,
 				B527E9D92315AD9400DE51CC /* RegistrationVC.swift in Sources */,
 				B5166B47231497350009EA8E /* NetworkManager.swift in Sources */,
+				B526B0842318622F00839E1C /* BorderTextView.swift in Sources */,
 				B5166B3923144C2B0009EA8E /* JSONParameterEncoder.swift in Sources */,
 				B5166B1D23142D750009EA8E /* Foodie_Fun.xcdatamodeld in Sources */,
 				B5166B4123147C560009EA8E /* Login.swift in Sources */,
 				B527E9E32316BAE000DE51CC /* PostCell.swift in Sources */,
-				B527E9EB2316DD8300DE51CC /* CreateReviewVC.swift in Sources */,
+				B527E9EB2316DD8300DE51CC /* manageReviewVC.swift in Sources */,
 				B527E9E92316DB5200DE51CC /* SearchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
