@@ -9,8 +9,10 @@
 import Foundation
 
 struct ReviewRequest: Codable {
+	let id: Int?
 	let restaurantName: String
 	let restaurantType: String
+	let createdAt: String?
 	let userId: Int
 	let itemName: String
 	let photoOfOrder: String

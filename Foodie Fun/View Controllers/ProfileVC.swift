@@ -38,7 +38,7 @@ class ProfileVC: UIViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let reviewVC = segue.destination as? ViewReviewVC {
 			guard let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
-			reviewVC.post = posts[indexPath.item]
+			reviewVC.review = posts[indexPath.item]
 		}
 	}
 	
