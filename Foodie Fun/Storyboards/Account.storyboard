@@ -16,6 +16,9 @@
         <array key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
         </array>
+        <array key="Montserrat-RegularItalic.ttf">
+            <string>Montserrat-Italic</string>
+        </array>
         <array key="Montserrat-SemiBold.ttf">
             <string>Montserrat-SemiBold</string>
         </array>
@@ -141,7 +144,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9bY-hR-Dfd">
                                 <rect key="frame" x="87" y="153" width="240" height="157"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iWi-90-AjD">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="Profile_Pic" translatesAutoresizingMaskIntoConstraints="NO" id="iWi-90-AjD">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmc-hh-3WW">
@@ -190,7 +193,7 @@
             </objects>
             <point key="canvasLocation" x="3842.0289855072465" y="-1558.2589285714284"/>
         </scene>
-        <!--View ReviewVC-->
+        <!--Resturant-->
         <scene sceneID="sLi-oT-r1Q">
             <objects>
                 <viewController id="s0M-wu-lep" customClass="ViewReviewVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
@@ -199,10 +202,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Esc-lq-YmP">
-                                <rect key="frame" x="0.0" y="296" width="414" height="304"/>
+                                <rect key="frame" x="39" y="203" width="337" height="165.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JoK-AP-iJ6">
-                                <rect key="frame" x="20" y="636" width="374" height="233"/>
+                                <rect key="frame" x="20" y="418.5" width="374" height="183.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x84-jC-Xj6">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="68.5"/>
@@ -242,6 +245,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JKU-wX-MH9"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Resturant" id="Z8i-3d-MKt">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="0MU-HV-U66"/>
+                            <barButtonItem systemItem="edit" id="PET-Dk-Ulu">
+                                <connections>
+                                    <segue destination="GuN-Hd-CWx" kind="show" id="Qy5-nf-0RC"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="commentLbl" destination="HZ6-YM-zjI" id="Ad1-lb-qSa"/>
                         <outlet property="imgView" destination="Esc-lq-YmP" id="doP-e1-hFY"/>
@@ -336,8 +351,92 @@
             </objects>
             <point key="canvasLocation" x="2931.8840579710145" y="-1558.2589285714284"/>
         </scene>
+        <!--Create Post-->
+        <scene sceneID="3VB-hj-uFT">
+            <objects>
+                <viewController storyboardIdentifier="CreateReview" id="GuN-Hd-CWx" customClass="CreateReviewVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Yi-6h-PJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5yV-U2-YG4">
+                                <rect key="frame" x="60" y="342" width="294" height="279"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-Zd-h84">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="31"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                        <color key="tintColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Add Photo"/>
+                                        <connections>
+                                            <action selector="addPhotoBtnTapped:" destination="GuN-Hd-CWx" eventType="touchUpInside" id="8Fy-ye-cQt"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Resturant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9oa-Tm-LfG">
+                                        <rect key="frame" x="0.0" y="51" width="294" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Resturant Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdD-Fm-oG2">
+                                        <rect key="frame" x="0.0" y="101" width="294" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rating (e.g 5.0)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-AA-oZk">
+                                        <rect key="frame" x="0.0" y="151" width="294" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uNG-NZ-2Ux">
+                                        <rect key="frame" x="0.0" y="201" width="294" height="78"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Italic" family="Montserrat" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iK0-9h-A2o">
+                                <rect key="frame" x="60" y="174" width="294" height="127"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iK0-9h-A2o" firstAttribute="leading" secondItem="fyB-yG-rcX" secondAttribute="leading" constant="60" id="9e0-s0-lkX"/>
+                            <constraint firstItem="5yV-U2-YG4" firstAttribute="leading" secondItem="fyB-yG-rcX" secondAttribute="leading" constant="60" id="UgW-tG-NVy"/>
+                            <constraint firstItem="5yV-U2-YG4" firstAttribute="centerX" secondItem="0Yi-6h-PJ5" secondAttribute="centerX" id="d4s-u9-jVN"/>
+                            <constraint firstItem="5yV-U2-YG4" firstAttribute="top" secondItem="iK0-9h-A2o" secondAttribute="bottom" constant="41" id="dKf-Yi-uxY"/>
+                            <constraint firstItem="fyB-yG-rcX" firstAttribute="bottom" secondItem="5yV-U2-YG4" secondAttribute="bottom" constant="192" id="hda-8b-vEL"/>
+                            <constraint firstItem="5yV-U2-YG4" firstAttribute="top" secondItem="0Yi-6h-PJ5" secondAttribute="top" constant="342" id="irj-Cq-dkY"/>
+                            <constraint firstItem="iK0-9h-A2o" firstAttribute="top" secondItem="fyB-yG-rcX" secondAttribute="top" constant="86" id="mps-hw-Z6R"/>
+                            <constraint firstItem="fyB-yG-rcX" firstAttribute="trailing" secondItem="iK0-9h-A2o" secondAttribute="trailing" constant="60" id="o9H-tc-anc"/>
+                            <constraint firstItem="fyB-yG-rcX" firstAttribute="trailing" secondItem="5yV-U2-YG4" secondAttribute="trailing" constant="60" id="xvB-Sf-Heg"/>
+                            <constraint firstItem="5yV-U2-YG4" firstAttribute="centerX" secondItem="0Yi-6h-PJ5" secondAttribute="centerX" id="zcy-Go-6nd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fyB-yG-rcX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="FZW-hp-ePg"/>
+                    <navigationItem key="navigationItem" title="Create Post" id="Wy8-P8-tpl">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="f05-3F-gyP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Hpe-J0-vWe"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="iK0-9h-A2o" id="Cpp-6I-LBg"/>
+                        <outlet property="ratingTextField" destination="XdD-Fm-oG2" id="Doz-TS-VfZ"/>
+                        <outlet property="reviewTextView" destination="uNG-NZ-2Ux" id="Oz8-3J-HAe"/>
+                        <outlet property="titleTextField" destination="9oa-Tm-LfG" id="xip-oB-vvX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyc-uL-Yiu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4696" y="-836"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Profile_Pic" width="117" height="116.5"/>
         <image name="undraw_portfolio_update_nqhs" width="1279" height="724"/>
     </resources>
 </document>
