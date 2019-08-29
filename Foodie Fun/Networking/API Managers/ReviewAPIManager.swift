@@ -18,8 +18,8 @@ extension NetworkManager {
 	
 	func putReview(forReview id: Int, request: ReviewRequest, completion: @escaping (_ reviews: Bool?, _ error: String?) -> Void) {
 		router.request(.putReview(reviewId: id, request: request)) { (data, response, error) in
-			let returnRequest = self.getObject(data, response, error, Bool.self)
-			completion(returnRequest.0, returnRequest.1)
+			let returnResult = self.getBool(data, response, error)
+			completion(returnResult.0, returnResult.1)
 		}
 	}
 	
@@ -32,8 +32,8 @@ extension NetworkManager {
 	
 	func deleteReview(reviewId: Int, completion: @escaping (_ reviews: Bool?, _ error: String?) -> ()) {
 		router.request(.deleteReviewBy(id: reviewId)) { (data, response, error) in
-			let returnRequest = self.getObject(data, response, error, Bool.self)
-			completion(returnRequest.0, returnRequest.1)
+			let returnResult = self.getBool(data, response, error)
+			completion(returnResult.0, returnResult.1)
 		}
 	}
 }

@@ -47,8 +47,8 @@ class CreateReviewVC: UIViewController {
 		NetworkManager.shared.postReview(request: newReview) { (result, error) in
 			DispatchQueue.main.async {
 				guard result != nil else { return }
-				#warning("Check if order of CreateReview has changed")
-				self.navigationController?.popViewController(animated: true)
+				
+				self.tabBarController?.selectedIndex = Tabs.profile.rawValue
 			}
 		}
 	}
@@ -60,7 +60,7 @@ class CreateReviewVC: UIViewController {
 //		priceTextField.delegate = self
 //		waitTimeTextField.delegate = self
 		
-		reviewTextView.delegate = self
+		setupTextView()
 	}
 	
 	private func newReview() -> ReviewRequest? {

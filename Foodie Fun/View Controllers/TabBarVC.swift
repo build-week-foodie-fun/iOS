@@ -10,6 +10,7 @@ import UIKit
 
 enum Tabs: Int {
 	case profile = 0
+	case addReview
 	case search
 }
 

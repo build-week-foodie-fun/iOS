@@ -38,6 +38,33 @@ struct NetworkManager {
 	
 	let router = Router<FoodieRouter>()
 	
+	func getBool(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> (Bool?, String?) {
+		if error != nil {
+			return (nil, "Please check your network connection.")
+		}
+		
+		if let response = response as? HTTPURLResponse {
+			let result = NetworkResponse.handleNetworkResponse(response)
+			switch result {
+			case .success:
+				guard data != nil else {
+					return (nil, NetworkResponse.noData.rawValue)
+				}
+				
+				var result = false
+				if let resultString = data.map({String(data: $0, encoding: .utf8)}), let resultString2 = resultString {
+					if resultString2 == "1" {
+						result = true
+					}
+					return (result, nil)
+				}
+			case .failure(let networkFailureError):
+				return (nil, networkFailureError)
+			}
+		}
+		return (nil, NetworkResponse.failed.rawValue)
+	}
+	
 	func getObject<T: Codable>(_ data: Data?, _ response: URLResponse?, _ error: Error?,_ returnType: T.Type) -> (T?, String?) {
 		if error != nil {
 			return (nil, "Please check your network connection.")
