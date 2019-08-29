@@ -1,5 +1,5 @@
 //
-//  manageReviewVC.swift
+//  ManageReviewVC.swift
 //  Foodie Fun
 //
 //  Created by Jeffrey Santana on 8/28/19.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class manageReviewVC: UIViewController {
+class ManageReviewVC: UIViewController {
 
 	//MARK: - IBOutlets
 	
 	@IBOutlet weak var imgView: UIImageView!
 	@IBOutlet weak var restaurantTextField: UITextField!
 	@IBOutlet weak var restaurantTypeTextField: UITextField!
-	@IBOutlet weak var titleTextField: UITextField!
+	@IBOutlet weak var platterTextField: UITextField!
 	@IBOutlet weak var ratingTextField: UITextField!
 	@IBOutlet weak var priceTextField: UITextField!
 	@IBOutlet weak var waitTimeTextField: UITextField!
@@ -28,6 +28,9 @@ class manageReviewVC: UIViewController {
 									What did you think after the first bite?
 									"""
 	var review: Review?
+	private var isEditMode: Bool {
+		return review != nil
+	}
 	
 	//MARK: - Life Cycle
 	
@@ -45,15 +48,7 @@ class manageReviewVC: UIViewController {
 	}
 	
 	@IBAction func saveBtnTapped(_ sender: Any) {
-		guard let newReview = newReview() else { return }
-		
-		NetworkManager.shared.postReview(request: newReview) { (result, error) in
-			DispatchQueue.main.async {
-				guard result != nil else { return }
-				
-				self.tabBarController?.selectedIndex = Tabs.profile.rawValue
-			}
-		}
+		postReview()
 	}
 	
 	//MARK: - Helpers
@@ -80,6 +75,7 @@ class manageReviewVC: UIViewController {
 		if let imgUrl = URL(string: review.photoOfOrder) {
 			imgView.loadImage(from: imgUrl)
 		}
+		platterTextField.text = review.itemName
 		restaurantTextField.text = review.restaurantName
 		restaurantTypeTextField.text = review.restaurantType
 		priceTextField.text = "\(review.price)"
@@ -92,22 +88,44 @@ class manageReviewVC: UIViewController {
 		guard
 			let restaurant = restaurantTextField.optionalText,
 			let restaurantType = restaurantTypeTextField.optionalText,
-			let title = titleTextField.optionalText,
+			let platter = platterTextField.optionalText,
 			let rating = ratingTextField.toDouble,
 			let review = reviewTextView.text,
 			let price = priceTextField.toDouble,
 			let waitTime = waitTimeTextField.optionalText,
 			let loggedInUserId = SettingsController.shared.loggedInUser?.id
 			else { return nil }
+		let reviewId = self.review?.id
+		let createdDate = self.review?.createdAt
 		
-//		return ReviewRequest(restaurantName: "L' Jeff", restaurantType: "Dominican Chiq", userId: loggedInUserId, itemName: title, photoOfOrder: "https://www.pngfind.com/mpng/bRmhm_food-icon-food-icon-transparent-gif-hd-png/", foodRating: rating, comments: review, price: 25.00, waitTime: "20", dateOfVisit: "")
-		
-		return ReviewRequest(restaurantName: restaurant, restaurantType: restaurantType, userId: loggedInUserId, itemName: title, photoOfOrder: "https://www.pngfind.com/mpng/bRmhm_food-icon-food-icon-transparent-gif-hd-png/", foodRating: rating, comments: review, price: price, waitTime: waitTime, dateOfVisit: "")
+		return ReviewRequest(id: reviewId, restaurantName: restaurant, restaurantType: restaurantType, createdAt: createdDate, userId: loggedInUserId, itemName: platter, photoOfOrder: "https://www.pngfind.com/mpng/bRmhm_food-icon-food-icon-transparent-gif-hd-png/", foodRating: rating, comments: review, price: price, waitTime: waitTime, dateOfVisit: "")
 	}
 	
+	private func postReview() {
+		guard let newReview = newReview() else { return }
+		
+		if isEditMode {
+			NetworkManager.shared.postReview(request: newReview) { (result, error) in
+				DispatchQueue.main.async {
+					guard result != nil else { return }
+					
+					self.tabBarController?.selectedIndex = Tabs.profile.rawValue
+				}
+			}
+		} else {
+			guard let reviewId = newReview.id else { return }
+			NetworkManager.shared.putReview(forReview: reviewId, request: newReview) { (result, error) in
+				DispatchQueue.main.async {
+					guard result != nil else { return }
+					
+					self.tabBarController?.selectedIndex = Tabs.profile.rawValue
+				}
+			}
+		}
+	}
 }
 
-extension manageReviewVC: UITextFieldDelegate {
+extension ManageReviewVC: UITextFieldDelegate {
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 		if textField == priceTextField || textField == ratingTextField {
 			let allowedCharacters = CharacterSet(charactersIn:"0123456789.")
@@ -126,7 +144,7 @@ extension manageReviewVC: UITextFieldDelegate {
 	}
 }
 
-extension manageReviewVC: UITextViewDelegate {
+extension ManageReviewVC: UITextViewDelegate {
 	
 	private func setupTextView() {
 		reviewTextView.delegate = self

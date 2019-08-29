@@ -30,7 +30,7 @@ class ViewReviewVC: UIViewController {
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let manageReviewVC = segue.destination as? manageReviewVC {
+		if let manageReviewVC = segue.destination as? ManageReviewVC {
 			manageReviewVC.review = review
 		}
 	}
