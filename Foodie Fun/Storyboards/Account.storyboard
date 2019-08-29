@@ -251,7 +251,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Resturant" id="Z8i-3d-MKt">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="trash" id="0MU-HV-U66"/>
+                            <barButtonItem systemItem="trash" id="0MU-HV-U66">
+                                <connections>
+                                    <action selector="deleteReview:" destination="s0M-wu-lep" id="xQP-v3-MW7"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="edit" id="PET-Dk-Ulu">
                                 <connections>
                                     <segue destination="GuN-Hd-CWx" kind="show" id="Qy5-nf-0RC"/>
@@ -318,6 +322,7 @@
                                                 <state key="normal" title="Add Photo"/>
                                                 <connections>
                                                     <action selector="addPhotoBtnTapped:" destination="GuN-Hd-CWx" eventType="touchUpInside" id="8Fy-ye-cQt"/>
+                                                    <action selector="saveBtnTapped:" destination="GuN-Hd-CWx" eventType="touchUpInside" id="lZr-gj-gaa"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -340,14 +345,20 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oCd-kv-ptO">
                                                 <rect key="frame" x="0.0" y="100" width="365" height="30"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rating (e.g 5.0)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-AA-oZk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="30"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGT-yx-pBX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGT-yx-pBX">
-                                                        <rect key="frame" x="187.5" y="0.0" width="177.5" height="30"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wait (e.g min)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="syb-v9-uPB">
+                                                        <rect key="frame" x="125" y="0.0" width="115" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rating (e.g 5.0)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-AA-oZk">
+                                                        <rect key="frame" x="250" y="0.0" width="115" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -386,9 +397,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imgView" destination="iK0-9h-A2o" id="Cpp-6I-LBg"/>
-                        <outlet property="ratingTextField" destination="XdD-Fm-oG2" id="Doz-TS-VfZ"/>
+                        <outlet property="priceTextField" destination="aGT-yx-pBX" id="HUm-bP-wMi"/>
+                        <outlet property="ratingTextField" destination="cyS-AA-oZk" id="ASC-HJ-zBd"/>
+                        <outlet property="restaurantTextField" destination="9oa-Tm-LfG" id="4ap-IG-ZPY"/>
+                        <outlet property="restaurantTypeTextField" destination="XdD-Fm-oG2" id="S6a-7p-wsA"/>
                         <outlet property="reviewTextView" destination="uNG-NZ-2Ux" id="Oz8-3J-HAe"/>
                         <outlet property="titleTextField" destination="9oa-Tm-LfG" id="xip-oB-vvX"/>
+                        <outlet property="waitTimeTextField" destination="syb-v9-uPB" id="yL6-k6-xi1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyc-uL-Yiu" userLabel="First Responder" sceneMemberID="firstResponder"/>
