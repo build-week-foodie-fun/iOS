@@ -164,13 +164,13 @@
 		B5166B2C23142DA30009EA8E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B527E9D82315AD9400DE51CC /* RegistrationVC.swift */,
 				B5166B1623142D750009EA8E /* LoginVC.swift */,
 				B548AE922316E1FF00357EA4 /* TabBarVC.swift */,
-				B527E9D82315AD9400DE51CC /* RegistrationVC.swift */,
 				B527E9E02316B98300DE51CC /* ProfileVC.swift */,
 				B527E9E42316C1BC00DE51CC /* ViewReviewVC.swift */,
-				B527E9E62316DA2C00DE51CC /* SearchVC.swift */,
 				B527E9EA2316DD8300DE51CC /* CreateReviewVC.swift */,
+				B527E9E62316DA2C00DE51CC /* SearchVC.swift */,
 				B527E9EC2316DF1B00DE51CC /* ManageProfileVC.swift */,
 			);
 			path = "View Controllers";

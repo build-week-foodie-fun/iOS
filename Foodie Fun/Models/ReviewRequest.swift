@@ -13,8 +13,8 @@ struct ReviewRequest: Codable {
 	let restaurantType: String
 	let userId: Int
 	let itemName: String
-	let photoOfOrder: URL
-	let foodRating: Int
+	let photoOfOrder: String
+	let foodRating: Double
 	let comments: String
 	let price: Double
 	let waitTime: String

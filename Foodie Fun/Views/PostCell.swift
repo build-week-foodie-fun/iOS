@@ -16,7 +16,11 @@ class PostCell: UICollectionViewCell {
 	
 	//MARK: - Properties
 	
-	var post: Review?
+	var post: Review? {
+		didSet {
+			configCell()
+		}
+	}
 	
 	//MARK: - IBActions
 	
@@ -24,9 +28,12 @@ class PostCell: UICollectionViewCell {
 	//MARK: - Helpers
 	
 	private func configCell() {
-		guard let post = post else { return }
+		imgView.layer.borderWidth = 1
+		imgView.layer.borderColor = UIColor.lightGray.cgColor
 		
-		imgView.loadImage(from: post.photoOfOrder)
+		guard let post = post, let photoURL = URL(string: post.photoOfOrder) else { return }
+		
+		imgView.loadImage(from: photoURL)
 	}
 	
 }

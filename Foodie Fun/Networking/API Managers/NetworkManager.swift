@@ -20,7 +20,7 @@ enum NetworkResponse: String {
 	case outdated = "The url you requested is outdated."
 	case failed = "Network request failed."
 	case noData = "Response returned with no data to decode."
-	case unableToDecode = "We could no decode the response."
+	case unableToDecode = "Could not decode the response."
 	
 	static func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String> {
 		switch response.statusCode {
@@ -37,6 +37,33 @@ struct NetworkManager {
 	static let shared = NetworkManager()
 	
 	let router = Router<FoodieRouter>()
+	
+	func getBool(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> (Bool?, String?) {
+		if error != nil {
+			return (nil, "Please check your network connection.")
+		}
+		
+		if let response = response as? HTTPURLResponse {
+			let result = NetworkResponse.handleNetworkResponse(response)
+			switch result {
+			case .success:
+				guard data != nil else {
+					return (nil, NetworkResponse.noData.rawValue)
+				}
+				
+				var result = false
+				if let resultString = data.map({String(data: $0, encoding: .utf8)}), let resultString2 = resultString {
+					if resultString2 == "1" {
+						result = true
+					}
+					return (result, nil)
+				}
+			case .failure(let networkFailureError):
+				return (nil, networkFailureError)
+			}
+		}
+		return (nil, NetworkResponse.failed.rawValue)
+	}
 	
 	func getObject<T: Codable>(_ data: Data?, _ response: URLResponse?, _ error: Error?,_ returnType: T.Type) -> (T?, String?) {
 		if error != nil {
@@ -57,6 +84,7 @@ struct NetworkManager {
 					let apiResponse = try decoder.decode(returnType, from: responseData)
 					return (apiResponse, nil)
 				} catch {
+					NSLog("\(error)")
 					return (nil, NetworkResponse.unableToDecode.rawValue)
 				}
 			case .failure(let networkFailureError):

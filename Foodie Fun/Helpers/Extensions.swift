@@ -31,6 +31,11 @@ extension UITextField {
 		let trimmedText = self.text?.trimmingCharacters(in: .whitespacesAndNewlines)
 		return (trimmedText ?? "").isEmpty ? nil : trimmedText
 	}
+	
+	var toDouble: Double? {
+		guard let text = self.optionalText else { return nil }
+		return Double(text)
+	}
 }
 
 extension UIImageView {

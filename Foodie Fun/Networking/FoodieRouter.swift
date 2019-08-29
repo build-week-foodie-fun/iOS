@@ -11,7 +11,8 @@ import Foundation
 enum FoodieRouter {
 	case register(request: LoginRequest)
 	case login(request: LoginRequest)
-	case putReview(reviewId: Int?, request: ReviewRequest)
+	case postReview(request: ReviewRequest)
+	case putReview(reviewId: Int, request: ReviewRequest)
 	case getReviews
 	case deleteReviewBy(id: Int)
 }
@@ -28,13 +29,10 @@ extension FoodieRouter: EndPointType {
 			return "register"
 		case .login(_):
 			return "login"
-		case .putReview(let id, _):
-			if let reviewId = id {
-				return "api/\(reviewId)"
-			} else {
-				return "api"
-			}
-		case .getReviews:
+		case .putReview(let reviewId, _):
+			return "api/\(reviewId)"
+		case .getReviews,
+			 .postReview:
 			return "api"
 		case .deleteReviewBy(let reviewId):
 			return "api/\(reviewId)"
@@ -44,14 +42,11 @@ extension FoodieRouter: EndPointType {
 	var httpMethod: HTTPMethod {
 		switch self {
 		case .register(_),
-			 .login(_):
+			 .login(_),
+			 .postReview(_):
 			return .post
-		case .putReview(let id, _):
-			if id != nil {
-				return .put
-			} else {
-				return .post
-			}
+		case .putReview(_, _):
+			return .put
 		case .getReviews:
 			return .get
 		case .deleteReviewBy:
@@ -61,13 +56,12 @@ extension FoodieRouter: EndPointType {
 	
 	var task: HTTPTask {
 		switch self {
-		case .register(let data):
+		case .register(let data),
+			 .login(let data):
 			let json = try? data.encode()
 			return .requestParameters(bodyParameters: json)
-		case .login(let data):
-			let json = try? data.encode()
-			return .requestParameters(bodyParameters: json)
-		case .putReview(_, let data):
+		case .putReview(_, let data),
+			 .postReview(let data):
 			let json = try? data.encode()
 			return .requestParameters(bodyParameters: json)
 		default:

@@ -8,15 +8,19 @@
 
 import Foundation
 
+struct UnnecessaryWrapper: Codable {
+	let data: [Review]
+}
+
 struct Review: Codable {
 	let id: Int
 	let restaurantName: String
 	let restaurantType: String
-	let createdAt: Date
+	let createdAt: String
 	let userId: Int
 	let itemName: String
-	let photoOfOrder: URL
-	let foodRating: Int
+	let photoOfOrder: String
+	let foodRating: Double
 	let comments: String
 	let price: Double
 	let waitTime: String
