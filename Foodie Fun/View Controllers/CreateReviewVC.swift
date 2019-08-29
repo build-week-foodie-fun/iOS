@@ -107,6 +107,8 @@ extension CreateReviewVC: UITextViewDelegate {
 		reviewTextView.delegate = self
 		reviewTextView.text = textViewPlaceholder
 		reviewTextView.textColor = UIColor.lightGray
+		reviewTextView.layer.borderWidth = 1
+		reviewTextView.layer.borderColor = #colorLiteral(red: 0.9175765514, green: 0.9176866412, blue: 0.9175391197, alpha: 1)
 	}
 	
 	func textViewDidBeginEditing(_ textView: UITextView) {
