@@ -31,6 +31,26 @@ class ViewReviewVC: UIViewController {
 	
 	//MARK: - IBActions
 	
+	@IBAction func deleteReview(_ sender: Any) {
+		guard let post = post else { return }
+		
+		let confirmAlert = UIAlertController(title: "Delete Review", message: "Are you sure you would like to delete this review?", preferredStyle: .alert)
+		let confirmAction = UIAlertAction(title: "confirm", style: .destructive) { (_) in
+			NetworkManager.shared.deleteReview(reviewId: post.id) { (result, error) in
+				if let result = result, result {
+					DispatchQueue.main.async {
+						self.navigationController?.popViewController(animated: true)
+					}
+				}
+			}
+		}
+		let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+		
+		confirmAlert.addAction(confirmAction)
+		confirmAlert.addAction(cancelAction)
+		present(confirmAlert, animated: true, completion: nil)
+		
+	}
 	
 	//MARK: - Helpers
 	
