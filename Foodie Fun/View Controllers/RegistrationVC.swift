@@ -12,7 +12,6 @@ class RegistrationVC: UIViewController {
 
 	//MARK: - IBOutlets
 	
-	@IBOutlet weak var nameTextField: UITextField!
 	@IBOutlet weak var usernameTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var confirmPwTextField: UITextField!

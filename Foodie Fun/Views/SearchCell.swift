@@ -16,11 +16,23 @@ class SearchCell: UICollectionViewCell {
 	
 	//MARK: - Properties
 	
+	var review: Review? {
+		didSet {
+			configCell()
+		}
+	}
 	
 	//MARK: - IBActions
 	
 	
 	//MARK: - Helpers
 	
-	
+	private func configCell() {
+		imgView.layer.borderWidth = 1
+		imgView.layer.borderColor = UIColor.lightGray.cgColor
+		
+		guard let review = review, let foodUrl = URL(string: review.photoOfOrder) else { return }
+		
+		imgView.loadImage(from: foodUrl)
+	}
 }

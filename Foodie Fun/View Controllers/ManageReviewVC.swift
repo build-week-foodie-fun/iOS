@@ -84,6 +84,17 @@ class ManageReviewVC: UIViewController {
 		reviewTextView.text = review.comments
 	}
 	
+	private func resetViews() {
+		imgView.image = UIImage(named: "undraw_street_food_hm5i")
+		platterTextField.text = ""
+		restaurantTextField.text = ""
+		restaurantTypeTextField.text = ""
+		priceTextField.text = ""
+		waitTimeTextField.text = ""
+		ratingTextField.text = ""
+		reviewTextView.text = textViewPlaceholder
+		reviewTextView.textColor = UIColor.lightGray	}
+	
 	private func newReview() -> ReviewRequest? {
 		guard
 			let restaurant = restaurantTextField.optionalText,
@@ -105,19 +116,19 @@ class ManageReviewVC: UIViewController {
 		guard let newReview = newReview() else { return }
 		
 		if isEditMode {
-			NetworkManager.shared.postReview(request: newReview) { (result, error) in
-				DispatchQueue.main.async {
-					guard result != nil else { return }
-					
-					self.tabBarController?.selectedIndex = Tabs.profile.rawValue
-				}
-			}
-		} else {
 			guard let reviewId = newReview.id else { return }
 			NetworkManager.shared.putReview(forReview: reviewId, request: newReview) { (result, error) in
 				DispatchQueue.main.async {
 					guard result != nil else { return }
-					
+
+					self.navigationController?.popToRootViewController(animated: true)
+				}
+			}
+		} else {
+			NetworkManager.shared.postReview(request: newReview) { (result, error) in
+				DispatchQueue.main.async {
+					guard result != nil else { return }
+
 					self.tabBarController?.selectedIndex = Tabs.profile.rawValue
 				}
 			}
@@ -125,16 +136,18 @@ class ManageReviewVC: UIViewController {
 	}
 }
 
+//MARK: - TextField Delegate
+
 extension ManageReviewVC: UITextFieldDelegate {
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-		if textField == priceTextField || textField == ratingTextField {
+		if textField == priceTextField || textField == ratingTextField || textField == waitTimeTextField {
 			let allowedCharacters = CharacterSet(charactersIn:"0123456789.")
 			let characterSet = CharacterSet(charactersIn: string)
 			let oldText = textField.optionalText ?? ""
 			let newText = NSString(string: oldText).replacingCharacters(in: range, with: string)
 			
 			#warning("Work on 2 decimal places")
-			if let rating = Double(newText), textField == ratingTextField && rating > 5 {
+			if let rating = Double(newText), textField == ratingTextField && rating > 10 {
 				return false
 			}
 			
@@ -143,6 +156,8 @@ extension ManageReviewVC: UITextFieldDelegate {
 		return true
 	}
 }
+
+//MARK: - TextView Delegate
 
 extension ManageReviewVC: UITextViewDelegate {
 	

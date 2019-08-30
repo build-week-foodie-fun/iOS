@@ -40,7 +40,7 @@ struct NetworkManager {
 	
 	func getBool(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> (Bool?, String?) {
 		if error != nil {
-			return (nil, "Please check your network connection.")
+			return (nil, error?.localizedDescription)
 		}
 		
 		if let response = response as? HTTPURLResponse {

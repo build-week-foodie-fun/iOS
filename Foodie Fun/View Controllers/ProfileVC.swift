@@ -13,8 +13,11 @@ class ProfileVC: UIViewController {
 	//MARK: - IBOutlets
 	
 	@IBOutlet weak var imgView: UIImageView!
-	@IBOutlet weak var collectionView: UICollectionView!
 	@IBOutlet weak var nameLbl: UILabel!
+	@IBOutlet weak var postCountLbl: UILabel!
+	@IBOutlet weak var followersCountLbl: UILabel!
+	@IBOutlet weak var followingCountLbl: UILabel!
+	@IBOutlet weak var collectionView: UICollectionView!
 	
 	//MARK: - Properties
 	
@@ -61,6 +64,7 @@ class ProfileVC: UIViewController {
 			let loggedInUserId = SettingsController.shared.loggedInUser?.id
 			self.posts = reviews.filter({$0.userId == loggedInUserId})
 			DispatchQueue.main.async {
+				self.postCountLbl.text = "\(posts.count)"
 				self.collectionView.reloadData()
 			}
 		}
