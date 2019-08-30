@@ -64,7 +64,7 @@ class ProfileVC: UIViewController {
 			let loggedInUserId = SettingsController.shared.loggedInUser?.id
 			self.posts = reviews.filter({$0.userId == loggedInUserId})
 			DispatchQueue.main.async {
-				self.postCountLbl.text = "\(reviews.count)"
+				self.postCountLbl.text = "\(posts.count)"
 				self.collectionView.reloadData()
 			}
 		}
