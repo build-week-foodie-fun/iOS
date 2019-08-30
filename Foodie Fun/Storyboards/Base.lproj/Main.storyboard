@@ -60,11 +60,11 @@
             </objects>
             <point key="canvasLocation" x="2418" y="508"/>
         </scene>
-        <!--Add-->
+        <!--Navigation Controller-->
         <scene sceneID="Gpg-yB-B5L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kz7-l3-ViX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Add" image="the right size add button" id="FAO-bz-KVC">
+                    <tabBarItem key="tabBarItem" title="" image="the right size add button" id="FAO-bz-KVC">
                         <color key="badgeColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -106,7 +106,7 @@
         <scene sceneID="0Lr-tH-PEl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oJU-92-u1d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="0fM-fo-oAy"/>
+                    <tabBarItem key="tabBarItem" title="" image="Resized Search" id="0fM-fo-oAy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O0P-9D-0Jl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -123,6 +123,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Resized Search" width="34" height="30"/>
         <image name="User bar item icon" width="25" height="25"/>
         <image name="the right size add button" width="28" height="28"/>
     </resources>
