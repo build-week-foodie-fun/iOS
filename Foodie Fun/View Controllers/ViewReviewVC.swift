@@ -13,13 +13,21 @@ class ViewReviewVC: UIViewController {
 	//MARK: - IBOutlets
 	
 	@IBOutlet weak var imgView: UIImageView!
-	@IBOutlet weak var titleLbl: UILabel!
-	@IBOutlet weak var ratingLbl: UILabel!
+	@IBOutlet weak var platterLbl: BorderLabel!
+	@IBOutlet weak var ratingLbl: BorderLabel!
+	@IBOutlet weak var waitTimeLbl: BorderLabel!
+	@IBOutlet weak var priceLbl: BorderLabel!
 	@IBOutlet weak var commentLbl: UITextView!
 	
 	//MARK: - Properties
 	
 	var review: Review?
+	private var currencyFormatter: NumberFormatter {
+		let formatter = NumberFormatter()
+		formatter.locale = Locale.current
+		formatter.numberStyle = .currency
+		return formatter
+	}
 	
 	//MARK: - Life Cycle
 	
@@ -63,9 +71,16 @@ class ViewReviewVC: UIViewController {
 	private func updateViews() {
 		guard let post = review else { return }
 		
-		titleLbl.text = post.itemName.capitalized
+		title = post.restaurantName
+		platterLbl.text = post.itemName.capitalized
 		ratingLbl.text = "\(post.foodRating)/10"
+		waitTimeLbl.text = post.waitTime
+		priceLbl.text = currencyFormatter.string(from: NSNumber(value: post.price))
 		commentLbl.text = post.comments
+		
+		if review?.userId != SettingsController.shared.loggedInUser?.id {
+			navigationItem.rightBarButtonItems?.removeAll()
+		}
 		
 		guard let photoURL = URL(string: post.photoOfOrder) else { return }
 		
