@@ -66,7 +66,8 @@ class RegistrationVC: UIViewController {
 	
 	private func continuetoNextScreen() {
 		if SettingsController.shared.isFreshInstall {
-			navigationController?.popViewController(animated: true)
+				SettingsController.shared.isFreshInstall = false
+				self.performSegue(withIdentifier: "TutorialSegue", sender: nil)
 		} else {
 			if let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
 				self.present(mainVC, animated: true, completion: nil)

@@ -16,9 +16,9 @@ class SettingsController {
 	private let keychain = Keychain(service: "com.build-week.Foodie")
 	
 	private let tokenKey = "token_key"
-	private let userIdKey = "user_id_key"
 	private let usernameKey = "username_key"
 	private let userPasswordKey = "user_password_key"
+	private let userImgKey = "user_img_key"
 	private let saveProfileKey = "save_profile_key"
 	private let freshInstallationKey = "fresh_installation_key"
 	
@@ -36,6 +36,24 @@ class SettingsController {
 	}
 	
 	private(set) var loggedInUser: Login?
+	
+	var userProfileImg: UIImage? {
+		get {
+			guard let stringPath = Bundle.main.path(forResource: "profilePic", ofType: "png") else { return nil }
+			let data = FileManager.default.contents(atPath: stringPath)
+			guard let imageData = data else { return nil }
+			return UIImage(data: imageData)
+		}
+		set {
+			if let image = newValue {
+				if let data = image.pngData() {
+					let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+					let filename = paths[0].appendingPathComponent("profilePic.png")
+					try? data.write(to: filename)
+				}
+			}
+		}
+	}
 	
 	private(set) var userCredentials: LoginRequest? {
 		get {
@@ -55,7 +73,9 @@ class SettingsController {
 	
 	var isSaveCredentials: Bool {
 		get {
-			guard let isSaved = defaults.value(forKey: saveProfileKey) as? Bool else { return false }
+			guard let isSaved = defaults.value(forKey: saveProfileKey) as? Bool else {
+				
+				return false }
 			return isSaved
 		}
 		set {
@@ -68,7 +88,11 @@ class SettingsController {
 	
 	var isFreshInstall: Bool {
 		get {
-			guard let isFresh = defaults.value(forKey: freshInstallationKey) as? Bool else { return false }
+			guard let isFresh = defaults.value(forKey: freshInstallationKey) as? Bool else {
+				try? keychain.removeAll()
+				defaults.set(true, forKey: freshInstallationKey)
+				return false
+			}
 			return isFresh
 		}
 		set {
