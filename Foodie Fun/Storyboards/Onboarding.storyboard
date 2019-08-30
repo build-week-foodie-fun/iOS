@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pyo-XY-Wwn">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="NBa-qt-ila">
+            <objects>
+                <viewController id="8vc-1H-9b7" customClass="LoginVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PL3-4q-fSj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="dKa-1E-em7">
+                                <rect key="frame" x="20.5" y="177" width="373" height="542"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="FoodieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="a8W-JG-Ssk">
+                                        <rect key="frame" x="13.5" y="0.0" width="346" height="297"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1Wz-1F-L1l">
+                                        <rect key="frame" x="37.5" y="337" width="298" height="75"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCk-5j-6Ln">
+                                                <rect key="frame" x="0.0" y="0.0" width="298" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5D-Jg-QAs">
+                                                <rect key="frame" x="0.0" y="45" width="298" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L4h-6Y-g1B">
+                                        <rect key="frame" x="67.5" y="452" width="238" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPe-zA-dDK" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="40"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                                <color key="tintColor" red="0.95120667049999996" green="0.94661146920000006" blue="0.95580187179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Sign In"/>
+                                                <connections>
+                                                    <action selector="signInBtnTapped:" destination="8vc-1H-9b7" eventType="touchUpInside" id="F77-PP-NOF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-rm-Rme" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="238" height="40"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                                <color key="tintColor" red="0.95120667049999996" green="0.94661146920000006" blue="0.95580187179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Create Account"/>
+                                                <connections>
+                                                    <segue destination="Bo8-OX-ofp" kind="show" id="4xN-qA-iSU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="L4h-6Y-g1B" firstAttribute="width" secondItem="1Wz-1F-L1l" secondAttribute="width" multiplier="0.8" id="Mdb-eu-Pjj"/>
+                                    <constraint firstItem="1Wz-1F-L1l" firstAttribute="width" secondItem="dKa-1E-em7" secondAttribute="width" multiplier="0.8" id="bZO-85-pgS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dKa-1E-em7" firstAttribute="height" secondItem="dfN-J2-Y62" secondAttribute="height" multiplier="0.7" id="Mu6-xJ-bVO"/>
+                            <constraint firstItem="dKa-1E-em7" firstAttribute="width" secondItem="dfN-J2-Y62" secondAttribute="width" multiplier="0.9" id="TuB-FL-K7k"/>
+                            <constraint firstItem="dKa-1E-em7" firstAttribute="centerY" secondItem="PL3-4q-fSj" secondAttribute="centerY" id="WnY-L1-Lcc"/>
+                            <constraint firstItem="dKa-1E-em7" firstAttribute="centerX" secondItem="PL3-4q-fSj" secondAttribute="centerX" id="dcx-NI-UWg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dfN-J2-Y62"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K8T-QT-Puc"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="X5D-Jg-QAs" id="PbL-3Y-0ts"/>
+                        <outlet property="usernameTextField" destination="tCk-5j-6Ln" id="aJ4-1G-ff7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnA-ah-7yM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-926.08695652173924" y="444.64285714285711"/>
+        </scene>
+        <!--Create Account-->
+        <scene sceneID="vt3-bU-BCJ">
+            <objects>
+                <viewController id="Bo8-OX-ofp" customClass="RegistrationVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s6M-ca-xL3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lD3-0J-Qov">
+                                <rect key="frame" x="50" y="305" width="314" height="220"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-S0-mEY">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-1n-nDe">
+                                        <rect key="frame" x="0.0" y="60" width="314" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xcq-Cm-mCl">
+                                        <rect key="frame" x="0.0" y="120" width="314" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFH-HF-nTb" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="180" width="220" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <color key="tintColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Create Account"/>
+                                        <connections>
+                                            <action selector="CreateAccountBtnTapped:" destination="Bo8-OX-ofp" eventType="touchUpInside" id="SUc-Ks-iuv"/>
+                                            <segue destination="9iq-HB-wkN" kind="show" identifier="TutorialSegue" id="btS-jq-QAY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xcq-Cm-mCl" firstAttribute="width" secondItem="cpA-1n-nDe" secondAttribute="width" id="G1a-su-7ko"/>
+                                    <constraint firstItem="bx9-S0-mEY" firstAttribute="width" secondItem="lD3-0J-Qov" secondAttribute="width" id="GyT-Vg-7Pn"/>
+                                    <constraint firstItem="cpA-1n-nDe" firstAttribute="width" secondItem="bx9-S0-mEY" secondAttribute="width" id="SoJ-88-A5K"/>
+                                    <constraint firstItem="qFH-HF-nTb" firstAttribute="width" secondItem="lD3-0J-Qov" secondAttribute="width" multiplier="0.7" id="V32-Ai-ZRn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o8w-FS-A7a" firstAttribute="trailing" secondItem="lD3-0J-Qov" secondAttribute="trailing" constant="50" id="4iv-f6-ViS"/>
+                            <constraint firstItem="lD3-0J-Qov" firstAttribute="leading" secondItem="o8w-FS-A7a" secondAttribute="leading" constant="50" id="dON-IG-QgD"/>
+                            <constraint firstItem="lD3-0J-Qov" firstAttribute="top" secondItem="o8w-FS-A7a" secondAttribute="top" constant="217" id="f4Q-69-w0t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o8w-FS-A7a"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Account" id="Vzx-Ga-Qcm"/>
+                    <connections>
+                        <outlet property="confirmPwTextField" destination="Xcq-Cm-mCl" id="7Jc-Ea-SLN"/>
+                        <outlet property="passwordTextField" destination="cpA-1n-nDe" id="q6T-uG-OAW"/>
+                        <outlet property="usernameTextField" destination="bx9-S0-mEY" id="6qn-G6-Uzq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HP5-BC-I0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="445"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PgD-md-LcZ">
+            <objects>
+                <viewController id="9iq-HB-wkN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eb6-VG-7xA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search and Discover Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhm-jQ-kK7">
+                                <rect key="frame" x="87" y="498" width="240" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="lwm-cY-cD2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw_file_searching_duff (1)" translatesAutoresizingMaskIntoConstraints="NO" id="E9v-aC-JzV">
+                                <rect key="frame" x="20" y="168" width="374" height="219"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zf-pF-kjh" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                <rect key="frame" x="48" y="683" width="318" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kXm-AQ-dtQ" kind="show" id="kzv-9v-sUU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zLv-1D-Q5h" firstAttribute="trailing" secondItem="E9v-aC-JzV" secondAttribute="trailing" constant="20" id="BD6-Af-2k0"/>
+                            <constraint firstItem="Uhm-jQ-kK7" firstAttribute="leading" secondItem="zLv-1D-Q5h" secondAttribute="leading" constant="87" id="KrU-Vr-GBU"/>
+                            <constraint firstItem="Uhm-jQ-kK7" firstAttribute="centerX" secondItem="5zf-pF-kjh" secondAttribute="centerX" id="LXy-Ew-Svk"/>
+                            <constraint firstItem="5zf-pF-kjh" firstAttribute="leading" secondItem="zLv-1D-Q5h" secondAttribute="leading" constant="48" id="nfK-4A-oNv"/>
+                            <constraint firstItem="Uhm-jQ-kK7" firstAttribute="centerX" secondItem="E9v-aC-JzV" secondAttribute="centerX" id="oax-3r-246"/>
+                            <constraint firstAttribute="bottom" secondItem="Uhm-jQ-kK7" secondAttribute="bottom" constant="380" id="pgr-V8-5Ta"/>
+                            <constraint firstItem="zLv-1D-Q5h" firstAttribute="bottom" secondItem="5zf-pF-kjh" secondAttribute="bottom" constant="90" id="qSH-C1-F8Y"/>
+                            <constraint firstItem="Uhm-jQ-kK7" firstAttribute="top" secondItem="E9v-aC-JzV" secondAttribute="bottom" constant="111" id="riE-kB-VH7"/>
+                            <constraint firstItem="E9v-aC-JzV" firstAttribute="leading" secondItem="zLv-1D-Q5h" secondAttribute="leading" constant="20" id="slE-Qh-ZHV"/>
+                            <constraint firstItem="E9v-aC-JzV" firstAttribute="top" secondItem="zLv-1D-Q5h" secondAttribute="top" constant="80" id="vio-cD-Fc5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zLv-1D-Q5h"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kfs-1V-Dh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1804.3478260869567" y="1186.6071428571429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qpU-tN-uk7">
+            <objects>
+                <viewController id="kXm-AQ-dtQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sF6-SV-yoN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="undraw_loving_it_y27c" translatesAutoresizingMaskIntoConstraints="NO" id="CXD-LL-ML5">
+                                <rect key="frame" x="20" y="163" width="374" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rE-5l-UtX" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                <rect key="frame" x="48" y="676" width="319" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="N42-qP-PIu" kind="show" id="ydb-9z-kuC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save and Share With Your Friends" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnm-dd-Yeh">
+                                <rect key="frame" x="61" y="481" width="292" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7xY-2r-kzU"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xhw-Ud-YBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-926" y="1187"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IZx-Yv-u16">
+            <objects>
+                <viewController id="N42-qP-PIu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qMi-rY-L8n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="undraw_party_lqnv" translatesAutoresizingMaskIntoConstraints="NO" id="8OK-V2-Gk7">
+                                <rect key="frame" x="20" y="164" width="374" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuK-rJ-FUd" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                <rect key="frame" x="48" y="675" width="319" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Find New Food!">
+                                    <color key="titleColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="THf-Oo-0QM" kind="show" id="pGc-ry-Edm"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iGD-4T-7V8">
+                                <rect key="frame" x="96" y="465" width="223.5" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last But Not Least Enjoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOa-6F-Sf4">
+                                        <rect key="frame" x="0.0" y="0.0" width="223.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Food Discovery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Och-3K-TJH">
+                                        <rect key="frame" x="18.5" y="32" width="186.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="AOu-zg-xYe"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EFh-sF-d1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="1187"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="5cj-gR-K7v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="THf-Oo-0QM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRc-zK-FHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="1187"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jRt-5d-g4E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pyo-XY-Wwn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CcN-Nm-v1d">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8vc-1H-9b7" kind="relationship" relationship="rootViewController" id="ugp-Id-2g1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxN-wK-fBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1804" y="445"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FoodieLogo" width="346" height="496"/>
+        <image name="undraw_file_searching_duff (1)" width="1082" height="939"/>
+        <image name="undraw_loving_it_y27c" width="1144" height="874"/>
+        <image name="undraw_party_lqnv" width="945" height="879"/>
+    </resources>
+</document>

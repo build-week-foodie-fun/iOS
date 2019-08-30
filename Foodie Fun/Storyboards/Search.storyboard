@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UAK-XI-5XO">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="elC-vc-q85">
+            <objects>
+                <viewController id="UAK-XI-5XO" customClass="SearchVC" customModule="Foodie_Fun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1k3-2H-M7h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Zs-ZG-LlK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="uip-eB-9Y7">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8A-Bf-tqm">
+                                        <rect key="frame" x="10.5" y="66" width="393" height="22"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A5z-vL-bx7">
+                                        <rect key="frame" x="0.0" y="98" width="414" height="720"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="pPD-nh-GZd">
+                                            <size key="itemSize" width="131" height="131"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="SearchCell" id="csj-nS-XFQ" customClass="SearchCell" customModule="Foodie_Fun" customModuleProvider="target">
+                                                <rect key="frame" x="5" y="5" width="131" height="131"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="131" height="131"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYa-vY-14M">
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="119"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tyi-wz-ISc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="119"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="Tyi-wz-ISc" firstAttribute="top" secondItem="KYa-vY-14M" secondAttribute="top" id="6Iq-mf-urY"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Tyi-wz-ISc" secondAttribute="bottom" id="PNy-LC-t2d"/>
+                                                                <constraint firstItem="Tyi-wz-ISc" firstAttribute="leading" secondItem="KYa-vY-14M" secondAttribute="leading" id="V6Z-nn-7Ii"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Tyi-wz-ISc" secondAttribute="trailing" id="WqO-lp-AQI"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="KYa-vY-14M" secondAttribute="bottom" id="VAv-1R-T8e"/>
+                                                    <constraint firstItem="KYa-vY-14M" firstAttribute="leading" secondItem="csj-nS-XFQ" secondAttribute="leading" id="WOv-i8-VkB"/>
+                                                    <constraint firstItem="KYa-vY-14M" firstAttribute="top" secondItem="csj-nS-XFQ" secondAttribute="top" id="ryJ-ww-K9V"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KYa-vY-14M" secondAttribute="trailing" id="yDt-bZ-zXi"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="imgView" destination="Tyi-wz-ISc" id="T9Z-uz-ajA"/>
+                                                    <segue destination="jte-Or-Wbw" kind="show" id="ybG-IA-oo5"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="U8A-Bf-tqm" firstAttribute="width" secondItem="5Zs-ZG-LlK" secondAttribute="width" multiplier="0.95" id="CgI-BJ-6yC"/>
+                                    <constraint firstItem="uip-eB-9Y7" firstAttribute="width" secondItem="5Zs-ZG-LlK" secondAttribute="width" id="SUI-A1-6Gc"/>
+                                    <constraint firstItem="A5z-vL-bx7" firstAttribute="width" secondItem="5Zs-ZG-LlK" secondAttribute="width" id="tch-mi-3qC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z6U-gc-Skn" firstAttribute="bottom" secondItem="5Zs-ZG-LlK" secondAttribute="bottom" id="685-QW-YN1"/>
+                            <constraint firstItem="5Zs-ZG-LlK" firstAttribute="top" secondItem="Z6U-gc-Skn" secondAttribute="top" id="Vu9-tz-uvh"/>
+                            <constraint firstItem="5Zs-ZG-LlK" firstAttribute="trailing" secondItem="Z6U-gc-Skn" secondAttribute="trailing" id="Xy3-4l-I17"/>
+                            <constraint firstItem="5Zs-ZG-LlK" firstAttribute="leading" secondItem="Z6U-gc-Skn" secondAttribute="leading" id="cch-cv-XI5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z6U-gc-Skn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="TYj-lH-tYp"/>
+                    <connections>
+                        <outlet property="collectionView" destination="A5z-vL-bx7" id="9r2-Nx-PWP"/>
+                        <outlet property="searchBar" destination="uip-eB-9Y7" id="rFZ-4x-QaK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQI-qr-GuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="jvo-1e-HXk"/>
+            </objects>
+            <point key="canvasLocation" x="3191" y="374"/>
+        </scene>
+        <!--ViewReview-->
+        <scene sceneID="wRD-A1-CnA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Account" referencedIdentifier="ViewReview" id="jte-Or-Wbw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkF-1K-UFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4101" y="374"/>
+        </scene>
+    </scenes>
+</document>
