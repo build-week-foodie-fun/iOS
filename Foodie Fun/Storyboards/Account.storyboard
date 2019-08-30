@@ -45,10 +45,10 @@
                                         <rect key="frame" x="124" y="223.5" width="166" height="267.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_Pic" translatesAutoresizingMaskIntoConstraints="NO" id="1pt-DY-Irb">
-                                                <rect key="frame" x="0.0" y="0.0" width="166" height="200.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="166" height="209.5"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN0-rz-wnY" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="227.5" width="166" height="40"/>
+                                                <rect key="frame" x="0.0" y="236.5" width="166" height="31"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -289,7 +289,7 @@
                                         <rect key="frame" x="0.0" y="317.5" width="352" height="297.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Frl-u4-UFX">
-                                                <rect key="frame" x="0.0" y="0.0" width="352" height="51"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEI-Hq-Ozz">
                                                         <rect key="frame" x="0.0" y="0.0" width="352" height="16"/>
@@ -298,7 +298,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lobster Bisque" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x84-jC-Xj6" customClass="BorderLabel" customModule="Foodie_Fun" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="21" width="352" height="30"/>
+                                                        <rect key="frame" x="0.0" y="21" width="352" height="21"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -306,7 +306,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Ci-tf-jkq">
-                                                <rect key="frame" x="0.0" y="71" width="352" height="51"/>
+                                                <rect key="frame" x="0.0" y="62" width="352" height="42"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="paH-y0-lsL">
                                                         <rect key="frame" x="0.0" y="0.0" width="352" height="16"/>
@@ -333,22 +333,22 @@
                                                         <viewLayoutGuide key="safeArea" id="ghj-sZ-ZH8"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="041-fT-8Dp">
-                                                        <rect key="frame" x="0.0" y="21" width="352" height="30"/>
+                                                        <rect key="frame" x="0.0" y="21" width="352" height="21"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="and-QL-ABE" customClass="BorderLabel" customModule="Foodie_Fun" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="112" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="112" height="21"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXr-fs-gjq" customClass="BorderLabel" customModule="Foodie_Fun" customModuleProvider="target">
-                                                                <rect key="frame" x="120" y="0.0" width="112" height="30"/>
+                                                                <rect key="frame" x="120" y="0.0" width="112" height="21"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.95" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSM-Ly-kAg" customClass="BorderLabel" customModule="Foodie_Fun" customModuleProvider="target">
-                                                                <rect key="frame" x="240" y="0.0" width="112" height="30"/>
+                                                                <rect key="frame" x="240" y="0.0" width="112" height="21"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -358,7 +358,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QMW-aJ-ygY">
-                                                <rect key="frame" x="0.0" y="142" width="352" height="155.5"/>
+                                                <rect key="frame" x="0.0" y="124" width="352" height="173.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNp-cg-1E5">
                                                         <rect key="frame" x="0.0" y="0.0" width="352" height="16"/>
@@ -367,7 +367,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HZ6-YM-zjI" customClass="BorderTextView" customModule="Foodie_Fun" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="21" width="352" height="134.5"/>
+                                                        <rect key="frame" x="0.0" y="21" width="352" height="152.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </string>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -433,10 +433,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-de-Vhz">
                                         <rect key="frame" x="41.5" y="0.0" width="331" height="398.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw_street_food_hm5i" translatesAutoresizingMaskIntoConstraints="NO" id="iK0-9h-A2o">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="undraw_street_food_hm5i" translatesAutoresizingMaskIntoConstraints="NO" id="iK0-9h-A2o">
                                                 <rect key="frame" x="0.0" y="0.0" width="331" height="343.5"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-Zd-h84" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-Zd-h84" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="358.5" width="331" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
