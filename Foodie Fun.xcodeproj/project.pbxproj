@@ -44,6 +44,7 @@
 		B527E9ED2316DF1B00DE51CC /* ManageProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B527E9EC2316DF1B00DE51CC /* ManageProfileVC.swift */; };
 		B548AE932316E20000357EA4 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548AE922316E1FF00357EA4 /* TabBarVC.swift */; };
 		B5A6A9842319856E00A688B7 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6A9832319856E00A688B7 /* ProfileVC.swift */; };
+		B5A6A986231E0D9200A688B7 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6A985231E0D9200A688B7 /* RoundedImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		B527E9EC2316DF1B00DE51CC /* ManageProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageProfileVC.swift; sourceTree = "<group>"; };
 		B548AE922316E1FF00357EA4 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		B5A6A9832319856E00A688B7 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		B5A6A985231E0D9200A688B7 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				B526B08123185EFC00839E1C /* BorderLabel.swift */,
 				B526B0832318622F00839E1C /* BorderTextView.swift */,
 				B526B085231864FC00839E1C /* RoundedButton.swift */,
+				B5A6A985231E0D9200A688B7 /* RoundedImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				B5166B4123147C560009EA8E /* Login.swift in Sources */,
 				B527E9E32316BAE000DE51CC /* PostCell.swift in Sources */,
 				B526B086231864FC00839E1C /* RoundedButton.swift in Sources */,
+				B5A6A986231E0D9200A688B7 /* RoundedImage.swift in Sources */,
 				B527E9EB2316DD8300DE51CC /* ManageReviewVC.swift in Sources */,
 				B527E9E92316DB5200DE51CC /* SearchCell.swift in Sources */,
 			);

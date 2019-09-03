@@ -39,19 +39,23 @@ class SettingsController {
 	
 	var userProfileImg: UIImage? {
 		get {
-			guard let stringPath = Bundle.main.path(forResource: "profilePic", ofType: "png") else { return nil }
-			let data = FileManager.default.contents(atPath: stringPath)
-			guard let imageData = data else { return nil }
-			return UIImage(data: imageData)
+			if let dir = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
+				return UIImage(contentsOfFile: URL(fileURLWithPath: dir.absoluteString).appendingPathComponent("profilePic.png").path)
+			}
+			print("No profile image data found.")
+			return UIImage(named: "Profile_Pic")
 		}
 		set {
-			if let image = newValue {
-				if let data = image.pngData() {
-					let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-					let filename = paths[0].appendingPathComponent("profilePic.png")
-					try? data.write(to: filename)
+			if let newImage = newValue, let data = newImage.jpegData(compressionQuality: 1) ?? newImage.pngData() {
+				if let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL {
+					do {
+						try data.write(to: directory.appendingPathComponent("profilePic.png")!)
+					} catch {
+						print(error.localizedDescription)
+					}
 				}
 			}
+			
 		}
 	}
 	

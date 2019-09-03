@@ -17,18 +17,24 @@ class ManageProfileVC: UIViewController {
 	
 	//MARK: - Properties
 	
+	private let imagePicker = UIImagePickerController()
 	
 	//MARK: - Life Cycle
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		imagePicker.delegate = self
 		updateViews()
 	}
 	
 	//MARK: - IBActions
 	
 	@IBAction func addPhotoBtnTapped(_ sender: Any) {
+		imagePicker.allowsEditing = false
+		imagePicker.sourceType = .photoLibrary
+		
+		present(imagePicker, animated: true, completion: nil)
 	}
 	
 	@IBAction func toggleAutoLoginTapped(_ sender: Any) {
@@ -38,6 +44,7 @@ class ManageProfileVC: UIViewController {
 	//MARK: - Helpers
 	
 	private func updateViews() {
+		imgView.image = SettingsController.shared.userProfileImg
 		autoLoginSwitch.isOn = SettingsController.shared.isSaveCredentials
 	}
 }
@@ -51,7 +58,12 @@ extension ManageProfileVC: UINavigationControllerDelegate, UIImagePickerControll
 		} else {
 			return
 		}
+		SettingsController.shared.userProfileImg = imgView.image
 		
-		dismiss(animated: true)
+		dismiss(animated: true, completion: nil)
+	}
+	
+	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+		dismiss(animated: true, completion: nil)
 	}
 }

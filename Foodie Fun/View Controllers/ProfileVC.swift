@@ -51,6 +51,7 @@ class ProfileVC: UIViewController {
 	//MARK: - Helpers
 	
 	private func updateViews() {
+		imgView.image = SettingsController.shared.userProfileImg
 		nameLbl.text = SettingsController.shared.loggedInUser?.username
 	}
 	
