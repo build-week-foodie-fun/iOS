@@ -30,10 +30,10 @@
                                 <rect key="frame" x="20.5" y="177" width="373" height="542"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="FoodieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="a8W-JG-Ssk">
-                                        <rect key="frame" x="13.5" y="0.0" width="346" height="311"/>
+                                        <rect key="frame" x="13.5" y="0.0" width="346" height="297"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1Wz-1F-L1l">
-                                        <rect key="frame" x="37.5" y="351" width="298" height="75"/>
+                                        <rect key="frame" x="37.5" y="337" width="298" height="75"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCk-5j-6Ln">
                                                 <rect key="frame" x="0.0" y="0.0" width="298" height="30"/>
@@ -50,10 +50,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L4h-6Y-g1B">
-                                        <rect key="frame" x="67.5" y="466" width="238" height="76"/>
+                                        <rect key="frame" x="67.5" y="452" width="238" height="90"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPe-zA-dDK" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="238" height="33"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                 <color key="tintColor" red="0.95120667049999996" green="0.94661146920000006" blue="0.95580187179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -63,7 +63,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-rm-Rme" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="43" width="238" height="33"/>
+                                                <rect key="frame" x="0.0" y="50" width="238" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                 <color key="tintColor" red="0.95120667049999996" green="0.94661146920000006" blue="0.95580187179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -138,7 +138,6 @@
                                         <state key="normal" title="Create Account"/>
                                         <connections>
                                             <action selector="CreateAccountBtnTapped:" destination="Bo8-OX-ofp" eventType="touchUpInside" id="SUc-Ks-iuv"/>
-                                            <segue destination="9iq-HB-wkN" kind="show" identifier="TutorialSegue" id="btS-jq-QAY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -173,6 +172,7 @@
                         <outlet property="confirmPwTextField" destination="Xcq-Cm-mCl" id="7Jc-Ea-SLN"/>
                         <outlet property="passwordTextField" destination="cpA-1n-nDe" id="q6T-uG-OAW"/>
                         <outlet property="usernameTextField" destination="bx9-S0-mEY" id="6qn-G6-Uzq"/>
+                        <segue destination="9iq-HB-wkN" kind="show" identifier="TutorialSegue" id="6JK-Rj-5pA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP5-BC-I0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,7 +200,7 @@
                                 <rect key="frame" x="20" y="168" width="374" height="219"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zf-pF-kjh" customClass="RoundedButton" customModule="Foodie_Fun" customModuleProvider="target">
-                                <rect key="frame" x="48" y="689" width="318" height="34"/>
+                                <rect key="frame" x="48" y="683" width="318" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                 <state key="normal" title="Next">
