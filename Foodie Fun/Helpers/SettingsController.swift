@@ -16,9 +16,9 @@ class SettingsController {
 	private let keychain = Keychain(service: "com.build-week.Foodie")
 	
 	private let tokenKey = "token_key"
-	private let userIdKey = "user_id_key"
 	private let usernameKey = "username_key"
 	private let userPasswordKey = "user_password_key"
+	private let userImgKey = "user_img_key"
 	private let saveProfileKey = "save_profile_key"
 	private let freshInstallationKey = "fresh_installation_key"
 	
@@ -36,6 +36,28 @@ class SettingsController {
 	}
 	
 	private(set) var loggedInUser: Login?
+	
+	var userProfileImg: UIImage? {
+		get {
+			if let dir = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
+				return UIImage(contentsOfFile: URL(fileURLWithPath: dir.absoluteString).appendingPathComponent("profilePic.png").path)
+			}
+			print("No profile image data found.")
+			return UIImage(named: "Profile_Pic")
+		}
+		set {
+			if let newImage = newValue, let data = newImage.jpegData(compressionQuality: 1) ?? newImage.pngData() {
+				if let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL {
+					do {
+						try data.write(to: directory.appendingPathComponent("profilePic.png")!)
+					} catch {
+						print(error.localizedDescription)
+					}
+				}
+			}
+			
+		}
+	}
 	
 	private(set) var userCredentials: LoginRequest? {
 		get {
@@ -55,7 +77,9 @@ class SettingsController {
 	
 	var isSaveCredentials: Bool {
 		get {
-			guard let isSaved = defaults.value(forKey: saveProfileKey) as? Bool else { return false }
+			guard let isSaved = defaults.value(forKey: saveProfileKey) as? Bool else {
+				
+				return false }
 			return isSaved
 		}
 		set {
@@ -68,7 +92,11 @@ class SettingsController {
 	
 	var isFreshInstall: Bool {
 		get {
-			guard let isFresh = defaults.value(forKey: freshInstallationKey) as? Bool else { return false }
+			guard let isFresh = defaults.value(forKey: freshInstallationKey) as? Bool else {
+				try? keychain.removeAll()
+				defaults.set(true, forKey: freshInstallationKey)
+				return false
+			}
 			return isFresh
 		}
 		set {

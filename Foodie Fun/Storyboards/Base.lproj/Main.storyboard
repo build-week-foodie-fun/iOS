@@ -27,6 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="5VH-DS-PeL" kind="relationship" relationship="viewControllers" id="RhM-ip-het"/>
@@ -63,7 +64,9 @@
         <scene sceneID="Gpg-yB-B5L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kz7-l3-ViX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="FAO-bz-KVC"/>
+                    <tabBarItem key="tabBarItem" title="" image="the right size add button" id="FAO-bz-KVC">
+                        <color key="badgeColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4CI-lW-J30">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -82,7 +85,9 @@
         <scene sceneID="gag-po-YmQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5VH-DS-PeL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" id="inK-sl-fky"/>
+                    <tabBarItem key="tabBarItem" title="" image="User bar item icon" id="inK-sl-fky">
+                        <color key="badgeColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hcs-Tf-f6F">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -101,7 +106,7 @@
         <scene sceneID="0Lr-tH-PEl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oJU-92-u1d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="0fM-fo-oAy"/>
+                    <tabBarItem key="tabBarItem" title="" image="Resized Search" id="0fM-fo-oAy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O0P-9D-0Jl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -117,4 +122,9 @@
             <point key="canvasLocation" x="1662" y="508"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Resized Search" width="34" height="30"/>
+        <image name="User bar item icon" width="25" height="25"/>
+        <image name="the right size add button" width="28" height="28"/>
+    </resources>
 </document>

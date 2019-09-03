@@ -110,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lD3-0J-Qov">
-                                <rect key="frame" x="50" y="305" width="314" height="220"/>
+                                <rect key="frame" x="50" y="408" width="314" height="220"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-S0-mEY">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
@@ -138,7 +138,6 @@
                                         <state key="normal" title="Create Account"/>
                                         <connections>
                                             <action selector="CreateAccountBtnTapped:" destination="Bo8-OX-ofp" eventType="touchUpInside" id="SUc-Ks-iuv"/>
-                                            <segue destination="9iq-HB-wkN" kind="show" identifier="TutorialSegue" id="btS-jq-QAY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -149,13 +148,22 @@
                                     <constraint firstItem="qFH-HF-nTb" firstAttribute="width" secondItem="lD3-0J-Qov" secondAttribute="width" multiplier="0.7" id="V32-Ai-ZRn"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw_elements_cipa" translatesAutoresizingMaskIntoConstraints="NO" id="acj-kM-Sam">
+                                <rect key="frame" x="5" y="188" width="404" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="dIx-AN-75p"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96325745559999998" green="0.96325745559999998" blue="0.96325745559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="o8w-FS-A7a" firstAttribute="trailing" secondItem="lD3-0J-Qov" secondAttribute="trailing" constant="50" id="4iv-f6-ViS"/>
+                            <constraint firstItem="lD3-0J-Qov" firstAttribute="centerX" secondItem="acj-kM-Sam" secondAttribute="centerX" id="NgG-ob-aS0"/>
                             <constraint firstItem="lD3-0J-Qov" firstAttribute="leading" secondItem="o8w-FS-A7a" secondAttribute="leading" constant="50" id="dON-IG-QgD"/>
-                            <constraint firstItem="lD3-0J-Qov" firstAttribute="top" secondItem="o8w-FS-A7a" secondAttribute="top" constant="217" id="f4Q-69-w0t"/>
+                            <constraint firstItem="acj-kM-Sam" firstAttribute="leading" secondItem="o8w-FS-A7a" secondAttribute="leading" constant="5" id="qfW-LD-Emj"/>
+                            <constraint firstItem="lD3-0J-Qov" firstAttribute="top" secondItem="acj-kM-Sam" secondAttribute="bottom" constant="50" id="sFX-gT-Pda"/>
+                            <constraint firstItem="acj-kM-Sam" firstAttribute="top" secondItem="o8w-FS-A7a" secondAttribute="top" constant="100" id="uFh-NA-bBV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o8w-FS-A7a"/>
                     </view>
@@ -164,11 +172,12 @@
                         <outlet property="confirmPwTextField" destination="Xcq-Cm-mCl" id="7Jc-Ea-SLN"/>
                         <outlet property="passwordTextField" destination="cpA-1n-nDe" id="q6T-uG-OAW"/>
                         <outlet property="usernameTextField" destination="bx9-S0-mEY" id="6qn-G6-Uzq"/>
+                        <segue destination="9iq-HB-wkN" kind="show" identifier="TutorialSegue" id="6JK-Rj-5pA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP5-BC-I0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55" y="445"/>
+            <point key="canvasLocation" x="-55.072463768115945" y="444.64285714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PgD-md-LcZ">
@@ -348,6 +357,7 @@
     </scenes>
     <resources>
         <image name="FoodieLogo" width="346" height="496"/>
+        <image name="undraw_elements_cipa" width="1294" height="946"/>
         <image name="undraw_file_searching_duff (1)" width="1082" height="939"/>
         <image name="undraw_loving_it_y27c" width="1144" height="874"/>
         <image name="undraw_party_lqnv" width="945" height="879"/>

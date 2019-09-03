@@ -36,7 +36,6 @@ class LoginVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		SettingsController.shared.isSaveCredentials = true
 	}
 	
 	//MARK: - IBActions
@@ -61,10 +60,7 @@ class LoginVC: UIViewController {
 			SettingsController.shared.loginProcedure(login)
 			
 			DispatchQueue.main.async {
-				if SettingsController.shared.isFreshInstall {
-					SettingsController.shared.isFreshInstall = false
-					self.performSegue(withIdentifier: "TutorialSegue", sender: nil)
-				} else if let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
+				if let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
 					self.present(mainVC, animated: true, completion: nil)
 				}
 			}
